@@ -1,4 +1,4 @@
-html,body{ width: 100%; height: 100%; margin: 0;  overflow: hidden;}
+html,body{ width: 100%; height: 100%; margin: 0;  overflow: auto;}
 
 @font-face {
     font-family: 'HancomUljuBangudaePetroglyph';
@@ -21,17 +21,14 @@ html,body{ width: 100%; height: 100%; margin: 0;  overflow: hidden;}
     padding-left: 330px; 
 }
 .maintitle{
-    position: fixed;
     font-family: 'HancomUljuBangudaePetroglyph';
     font-size: 40px;
     cursor: pointer;
 }
-
 .mainsmalltitle{
-    position: fixed;
     font-family: 'HancomUljuBangudaePetroglyph';
     padding-top: 28px;
-    padding-left: 75px;
+    padding-left: 5px;
     font-size: small;
     cursor: pointer;
 }
@@ -70,13 +67,12 @@ html,body{ width: 100%; height: 100%; margin: 0;  overflow: hidden;}
     align-items: center;
     cursor: pointer;
 }
-
 .nav-icons {
     margin-right: 550px;
     display: flex;
     align-items: center;
+    position: relative;
 }
-
 .nav-login  {
     display: flex;
     flex-direction: column;
@@ -84,16 +80,16 @@ html,body{ width: 100%; height: 100%; margin: 0;  overflow: hidden;}
     margin-left: 5px;
     padding-top: 10px;
     cursor: pointer;
-    position: fixed;
+    position: absolute;
 }
 .nav-map{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 70px;
+    margin-left: 75px;
     padding-top: 10px;
     cursor: pointer;
-    position: fixed; 
+    position: absolute; 
 }
 .nav-mytrip{
     display: flex;
@@ -102,11 +98,12 @@ html,body{ width: 100%; height: 100%; margin: 0;  overflow: hidden;}
     margin-left: 145px;
     padding-top: 10px;
     cursor: pointer;
-    position: fixed; 
+    position: absolute; 
 }
 .nav-login .login-text,
 .nav-map .map-text,
 .nav-mytrip .mytrip-text {
+    width: 60px; text-align: center;
     margin-top: 10px;
     font-size: 14px;
 }
@@ -277,7 +274,7 @@ hr {
     height: 20px; top: 25px; position: absolute;
 }
 .leftContent{
-    width: 22%; height: 79%; left: 0px; top: 252px; position: absolute; background: #F1F1F1
+    width: 22%; height: 79%; left: 0px; top: 211px; position: absolute; background: #F1F1F1
 }
 .imgContainer{
     width: 100%; height: 20%; left: 0px; top: 0px; position: absolute;
@@ -286,10 +283,14 @@ hr {
     width: 100%; height: 100%; left: 0px; top: 0px; position: absolute;
 }
 .sideBar{
-    width: 100%; height: 5%; left: 0px; top: 175px; position: absolute; border-bottom: 1px solid black; background: white;
+    width: 100%; height: 5%; left: 0px; top: 160px; position: relative; border-bottom: 1px solid black; background: white;
 }
 .mapFilter{
-    width: 91px; height: 13px; left: 307px; top: 10px; position: absolute;
+    width: 91px; height: 13px;  
+    top: 50%;
+    left: 85%;
+    transform: translate(-50%, -85%);
+    position: absolute;
 }
 #distance{
     width: 40px; height: 12px; left: 0px; top: 0px; position: absolute; color: #666666; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word;
@@ -301,7 +302,7 @@ hr {
     width: 10px; height: 0px; left: 44px; top: 13px; position: absolute; transform: rotate(-90deg); transform-origin: 0 0; border: 1px #666666 solid;
 }
 .mapContent{
-    width: 100%; height: 75%; left: 0px; top: 220px; position: absolute
+    width: 100%; height: 75%; left: 0px; top: 202px; position: absolute
 }
 .mapGroup{
     width: 100%; height: 25%; left: 0px; top: 0px; position: absolute; background: white; border-bottom: 1px gray solid;
@@ -325,10 +326,17 @@ hr {
     width: 100%; height: 100%; position: absolute;
 }
 .ment{
-    width: 90px; height: 15px; left: 329px; top: 65px; position: absolute; color: #767676; font-size: 12px; font-family: Karantina; font-weight: 400; line-height: 15px; word-wrap: break-word; text-align: left;
+    width: 90px; height: 15px; 
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%, -90%); position: absolute; color: #767676; font-size: 12px; font-family: Karantina; font-weight: 400; line-height: 15px; word-wrap: break-word; text-align: left;
 }
 #mapContainer{
-    width: 78%; height: 78%; left: 422px; top: 252px; position: relative;
+    width: 78%; height: 80%; 
+    top: 61.5%;
+    left: 61.1%;
+    transform: translate(-50%, -50%);
+    position: absolute;
 }
 #Map{
     width: 100%; height: 100%;  position: absolute;
@@ -337,7 +345,11 @@ hr {
 
 /* 맛집 페이지 stylesheet */
 .filterBox{
-    width: 892px; height: 197px; left: 472px; top: 163px; position: absolute; background: #F7F7F7;
+    width: 892px; height: 197px; 
+    top: 31.3%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    position: absolute; background: #F7F7F7;
 }
 .selected{
     width: 100px; height: 50px; left: 17px; top: 25px; position: relative; background: #57667E; border-radius: 40px;
@@ -417,8 +429,8 @@ hr {
     left: 153.67px; top: 30px; position: absolute; color: #666666; font-size: 12px; font-family: Inter; font-weight: 200; word-wrap: break-word;
 }
 .Rec2{
-    left: 153.67px; top: 52px; position: absolute; color: #666666; font-size: 12px; font-family: Inter; font-weight: 200; word-wrap: break-word;
+    left: 153.67px; top: 74px; position: absolute; color: #666666; font-size: 12px; font-family: Inter; font-weight: 300; word-wrap: break-word;
 }
 .Rec3{
-    left: 153.67px; top: 74px; position: absolute; color: #666666; font-size: 12px; font-family: Inter; font-weight: 300; word-wrap: break-word;
+    left: 153.67px; top: 52px; position: absolute; color: #666666; font-size: 12px; font-family: Inter; font-weight: 200; word-wrap: break-word;
 }

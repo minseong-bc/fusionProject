@@ -3,47 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>맛집 페이지</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://kit.fontawesome.com/366187f9eb.js"  crossorigin="anonymous"></script> <!--아이콘 가져오는 태그-->
+
 </head>
 <body>
   <div class="Entire">
   <!-- 페이지 공통 부분 -->
-    <div class="Topframe">
-      <div class="leftDiv">
-        <div id="gilbut">길벗</div>
-        <div id="descript" >길을 함께 가는 동무, 같은 길을 가는 사람</div>
-      </div>
-      <div class="SearchBar">
-        <div id="Search">
-          <img src="./images/SearchIcon.png" />
-        </div>
-      </div>
-
-      <!-- 우측 상단 로고 부분-->
-      <div class="rightDiv"> 
-        <div class="loginContainer">
-          <div class="loginDiv">
-            <img class="iconSort" src="./images/person.png" />
-          </div>
-          <div id="login">로그인</div>
-        </div>
-        <div class="trafficContainer">
-          <div class="trafficDiv" >
-            <img class="iconSort" src="./images/bus.png"  />
-          </div>
-          <div id="traffic">교통정보</div>
-        </div>
-        <div class="calendarContainer">
-          <div class="calendarDiv">
-            <img class="iconSort" src="./images/calendar.png" />
-          </div>
-          <div id="calendar">내 일정</div>
-        </div>
-      </div>
-      <!-- 우측 상단 로고 부분-->
+  <div class="nav">
+    <div class="title-container">
+      <span class="maintitle" style="color: #FFFFFF">길벗</span>
+      <span class="mainsmalltitle" style="color: black;">길을 함께 가는 동무, 같은 길을 가는 사람</span>
     </div>
-    <!-- 페이지 공통 부분 -->
+    <form class="search-box" action="" method="get">
+      <input class="search-txt" type="text" name="" placeholder="검색어를 입력하세요.">
+      <button class="search-btn" type="submit">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
+    <div class="nav-icons">,
+      <div class="nav-login">
+        <i class="fa-solid fa-user fa-2x"></i>
+        <span class="login-text">로그인</span>
+      </div>
+      <div class="nav-map">
+        <i class="fa-solid fa-bus fa-2x"></i>
+        <span class="map-text">교통정보</span>
+      </div>
+      <div class="nav-mytrip">
+        <i class="fa-regular fa-calendar-days fa-2x"></i>
+        <span class="mytrip-text">내 일정</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="menu">
+      <span class="category">지역별 여행지</span>
+      <span class="category">여행지추천</span>
+      <span class="category">여행정보</span>
+      <span class="category">여행기사</span>
+      <span class="category">여행지도</span>
+    </div>
+  </div>
+  <hr>
+  <!-- 페이지 공통 부분 -->
       
     <div class="filterBox" >
       <div class="selected"></div>
