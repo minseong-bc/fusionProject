@@ -1,0 +1,424 @@
+html,body{ width: 100%; height: 100%; margin: 0;  overflow: hidden;}
+
+@font-face {
+    font-family: 'HancomUljuBangudaePetroglyph';
+    font-style: 'normal';
+    src: url(fonts/HancomUljuBangudaePetroglyph.ttf);
+}
+.nav {
+    background-color: #3C78ED;
+    height : 130px;
+    width:100%;
+    margin-bottom:25px;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.title-container {
+    display: flex;
+    align-items: center;
+    padding-left: 330px; 
+}
+.maintitle{
+    position: fixed;
+    font-family: 'HancomUljuBangudaePetroglyph';
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.mainsmalltitle{
+    position: fixed;
+    font-family: 'HancomUljuBangudaePetroglyph';
+    padding-top: 28px;
+    padding-left: 75px;
+    font-size: small;
+    cursor: pointer;
+}
+.search-box {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 500px;
+    background: white;
+    border-radius: 40px;
+    padding: 10px;
+}
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0px;
+    color: #797979;
+    font-size: 16px;
+    line-height: 30px;
+    width: 100%;
+}
+.search-btn{
+    color: #3C78ED;
+    width: 40px;
+    height: 100%;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-icons {
+    margin-right: 550px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-login  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5px;
+    padding-top: 10px;
+    cursor: pointer;
+    position: fixed;
+}
+.nav-map{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 70px;
+    padding-top: 10px;
+    cursor: pointer;
+    position: fixed; 
+}
+.nav-mytrip{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 145px;
+    padding-top: 10px;
+    cursor: pointer;
+    position: fixed; 
+}
+.nav-login .login-text,
+.nav-map .map-text,
+.nav-mytrip .mytrip-text {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.menu{
+    text-align:center;
+    font-size:10px;
+    font-weight:bold;
+    
+}
+hr {
+    background :#3F78EB;
+    height:1px;
+    border:0;
+    margin-top:30px;
+}
+.category{
+    padding: 20px;
+    margin-right: 50px;
+    margin-left: 50px;
+    font-size: large;
+    cursor: pointer;
+
+}
+
+.slide-content {
+    text-align: center;
+}
+.main-title{
+    margin-top: 35px;
+    margin-left: 350px;
+    font-weight: bold;
+    font-size: 30px;
+}
+.slide{
+    width: 100%;
+    height: 350px;
+}
+.content-title {
+    margin-top: 10px;
+    font-weight: bold; 
+    font-size: 22px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.content-info {
+    margin-top: 5px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.swiper-container{
+    
+    width: 1400px;
+    height: 500px;
+    overflow: hidden;
+    margin-left: 270px;
+    
+}
+
+.swiper-slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100%/4);
+    height: 100%;
+    cursor: pointer;
+}
+.swiper-button-next,
+.swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+.Filter{
+    width: 40px; 
+    height: 26px; 
+    left: 166px; 
+    top: 149px; 
+    position: absolute; 
+    color: black; font-size: 20px; 
+    font-family: Inter; 
+    font-weight: 400; 
+    word-wrap: break-word
+}
+.Topframe{
+    width: 100%; height: 13%; left: 0px; top: 20px; position: absolute; background: #3F78EB;
+}
+.Entire{
+    margin: 0; width: 100vw; height: 100vh; position: relative;
+}
+/* 지도 페이지 stylesheet */
+.leftDiv{
+    width: 351px; height: 113.63px; left: 261px; top: 33.18px; position: absolute;
+}
+#gilbut{
+    width: 105px; height: 87.44px; left: 26px; top: 27.45px; position: absolute; color: rgba(255, 255, 255, 0.86); font-size: 50px; font-family: Hancom Ulju Bangudae Petroglyph; font-weight: 400; word-wrap: break-word;
+}
+#descript{
+    width: 230px; height: 14.08px; left: 139px; top: 71.40px; position: absolute; color: black; font-size: 12px; font-family: Hancom Ulju Bangudae Petroglyph; font-weight: 400; word-wrap: break-word;
+}
+.SearchBar{
+    width: 670px; height: 70.39px; left: 650px; top: 50px; position: absolute; background: white; border-radius: 60px; border: 2px #3D79EE solid;
+}
+#Search{
+    width: 29px; height: 29.16px; left: 610px; top: 21.12px; position: absolute; text-align: center; color: #3D79EE; font-size: 24px; font-family: SF Pro; font-weight: 400; word-wrap: break-word;
+}
+.rightDiv{
+    width: 312px; height: 155.56px; left: 1342px; top: 0px; position: absolute;
+}
+.loginContainer{
+    width: 122px; height: 133.20px; left: 10px; top: 11.18px; position: absolute;
+}
+.loginDiv{
+    width: 122px; height: 133.20px; left: 0px; top: 0px; position: relative; text-align: center; color: black; font-size: 30px; font-family: SF Pro; font-weight: 400; word-wrap: break-word;
+}
+.iconSort{
+    position: absolute; top:50%; left:50%; transform:translate(-50%, -50%); 
+}
+#login{
+    width: 55px; height: 21.35px; left: 35px; top: 93.54px; position: absolute; text-align: center; color: black; font-size: 18px; font-family: SF Pro; font-weight: 400; word-wrap: break-word;
+}
+.trafficContainer{
+    width: 117px; height: 107.78px; left: 87px; top: 23.39px; position: absolute
+}
+.trafficDiv{
+    width: 117px; height: 107.78px; left: 0px; top: 0px; position: relative; text-align: center; color: black; font-size: 25px; font-family: SF Pro; font-weight: 400; word-wrap: break-word;
+}
+#traffic{
+    width: 72px; height: 21.35px; left: 25px; top: 81.34px; position: absolute; text-align: center; color: black; font-size: 18px; font-family: SF Pro; font-weight: 400; word-wrap: break-word;
+}
+.calendarContainer{
+    width: 159px; height: 155.56px; left: 153px; top: 0px; position: absolute;
+}
+.calendarDiv{
+    width: 159px; height: 155.56px; left: 0px; top: 0px; position: relative; text-align: center; color: black; font-size: 30px; font-family: SF Pro; font-weight: 400; word-wrap: break-word;
+}
+#calendar{
+    width: 65px; height: 21.35px; left: 52px; top: 104.73px; position: absolute; text-align: center; color: black; font-size: 18px; font-family: SF Pro; font-weight: 400; word-wrap: break-word;
+}
+.categoryContainer{
+    width: 100%; height: 8%; left: -1px; top: 165px; position: absolute; border-bottom: 1px #3F78EB solid;
+}
+.categoryDiv{
+    width: 100%; height: 100%; left: -10px; top: 0px; position: absolute; background: white; 
+}
+.category1{
+    left: 416px; top: 17px; position: absolute; text-align: center; color: black; font-size: 25px; font-family: SF Pro; font-weight: 400; word-wrap: break-word;
+}
+.category2{
+    left: 679px; top: 17px; position: absolute; text-align: center; color: black; font-size: 25px; font-family: SF Pro; font-weight: 400; word-wrap: break-word;
+}
+.category3{
+    left: 913px; top: 17px; position: absolute; text-align: center; color: black; font-size: 25px; font-family: SF Pro; font-weight: 400; word-wrap: break-word;
+}
+.category4{
+    left: 1137px; top: 17px; position: absolute; text-align: center; color: black; font-size: 25px; font-family: SF Pro; font-weight: 400; word-wrap: break-word;
+}
+.category5{
+    left: 1348px; top: 17px; position: absolute; text-align: center; color: black; font-size: 25px; font-family: SF Pro; font-weight: 400; word-wrap: break-word; 
+}
+.iconCantainer{
+    height: 20px; top: 25px; position: absolute;
+}
+.leftContent{
+    width: 22%; height: 79%; left: 0px; top: 252px; position: absolute; background: #F1F1F1
+}
+.imgContainer{
+    width: 100%; height: 20%; left: 0px; top: 0px; position: absolute;
+}
+#backImg{
+    width: 100%; height: 100%; left: 0px; top: 0px; position: absolute;
+}
+.sideBar{
+    width: 100%; height: 5%; left: 0px; top: 175px; position: absolute; border-bottom: 1px solid black; background: white;
+}
+.mapFilter{
+    width: 91px; height: 13px; left: 307px; top: 10px; position: absolute;
+}
+#distance{
+    width: 40px; height: 12px; left: 0px; top: 0px; position: absolute; color: #666666; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word;
+}
+#review{
+    width: 38px; height: 12px; left: 53px; top: 0px; position: absolute; color: #666666; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word;
+}
+#sidebarLine{
+    width: 10px; height: 0px; left: 44px; top: 13px; position: absolute; transform: rotate(-90deg); transform-origin: 0 0; border: 1px #666666 solid;
+}
+.mapContent{
+    width: 100%; height: 75%; left: 0px; top: 220px; position: absolute
+}
+.mapGroup{
+    width: 100%; height: 25%; left: 0px; top: 0px; position: absolute; background: white; border-bottom: 1px gray solid;
+}
+.Image1{
+    width: 78.81px; height: 90px; left: 23px; top: 30px; position: absolute;
+}
+.Image2{
+    width: 78.81px; height: 90px; left: 29.93px; top: 30px; position: absolute;
+}
+.storeName{
+    width: 255px; left: 131px; top: 30px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; line-height: 35px; word-wrap: break-word;
+}
+.Km{
+    width: 198px; height: 15px; left: 131px; top: 65px; position: absolute; color: black; font-size: 10px; font-family: Karantina; font-weight: 400; line-height: 15px; word-wrap: break-word;
+}
+.saveContainer{
+    width: 24.94px; height: 25px; left: 130.69px; top: 95px; position: absolute;
+}
+.save{
+    width: 100%; height: 100%; position: absolute;
+}
+.ment{
+    width: 90px; height: 15px; left: 329px; top: 65px; position: absolute; color: #767676; font-size: 12px; font-family: Karantina; font-weight: 400; line-height: 15px; word-wrap: break-word; text-align: left;
+}
+#mapContainer{
+    width: 78%; height: 78%; left: 422px; top: 252px; position: relative;
+}
+#Map{
+    width: 100%; height: 100%;  position: absolute;
+}
+/* 지도 페이지 stylesheet */
+
+/* 맛집 페이지 stylesheet */
+.filterBox{
+    width: 892px; height: 197px; left: 472px; top: 163px; position: absolute; background: #F7F7F7;
+}
+.selected{
+    width: 100px; height: 50px; left: 17px; top: 25px; position: relative; background: #57667E; border-radius: 40px;
+}
+.area{
+    position: absolute; color: #666666; font-size: 25px; font-family: Inter; font-weight: 400; word-wrap: break-word;
+}
+.col1{left: 36px;}
+.col2{left: 165px}
+.col3{left: 289px}
+.col4{left: 403px}
+.col5{left: 502px}
+.col6{left: 603px}
+.col7{left: 713px}
+.row1{top: 32px;}
+.row2{top: 92px;}
+.row3{top: 147px;}
+
+.divLine{
+    width: 1189px; height: 0px; left: 380px; position: absolute; border: 0.50px #7D7D7D solid;
+}
+.title{
+    left: 378px; top: 402px; position: absolute; color: black; font-size: 50px; font-family: Inter; font-weight: 400; word-wrap: break-word;
+}
+.title45{
+    left: 377px; top: 416px; position: absolute; color: black; font-size: 45px; font-family: Inter; font-weight: 400; word-wrap: break-word;
+}
+.searchResult{
+    left: 378px; top: 509px; position: absolute;
+}
+.result{
+    font-size: 25px; font-family: Inter; font-weight: 400; word-wrap: break-word;
+}
+.filterOpt{
+    top: 514px; position: absolute; font-size: 25px; font-family: Inter; font-weight: 400; word-wrap: break-word;
+}
+
+.divideLine{
+    width: 20px; height: 0px; top: 539.48px; position: absolute; transform: rotate(-90deg); transform-origin: 0 0; border: 1px #666666 solid
+}
+.underLine{
+    width: 74.01px; height: 0px; left: 1299px; top: 544px; position: absolute; border: 1.5px black solid;
+}
+/* 맛집 페이지 */
+.RestName { 
+    left: 140px; top: 4px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word; text-align: left; 
+}
+
+.distanceContainer{
+    width: 160px; height: 17px; left: 134px; top: 36px; position: absolute; text-align: center;
+}
+.RecContainer{
+    width: 160px; height: 17px; left: 134px; top: 36px; position: absolute; text-align: center;
+}
+.wichi{
+    color: #767676; font-size: 14px; font-family: Inter; font-weight: 400; word-wrap: break-word;
+}
+.distanceNum{
+    color: black; font-size: 14px; font-family: Inter; font-weight: 400; word-wrap: break-word;
+}
+.contentContainer{
+    width: 714px; height: 99px; padding-right: 584px; left: 0px; top: 0px; position: absolute; justify-content: flex-start; align-items: center; display: inline-flex;
+}
+.contentFrame{
+    width: 714px; height: 99px; left: 380px; position: absolute;
+}
+.imageContainer{
+    width: 130px; height: 100px;
+}
+.image{
+    width: 100%; height: 100%;
+}
+.Recname{
+    left: 140px; top: 0px; position: absolute; color: black; font-size: 15px; font-family: Inter; font-weight: 400; word-wrap: break-word;
+}
+.Rec1{
+    left: 153.67px; top: 30px; position: absolute; color: #666666; font-size: 12px; font-family: Inter; font-weight: 200; word-wrap: break-word;
+}
+.Rec2{
+    left: 153.67px; top: 52px; position: absolute; color: #666666; font-size: 12px; font-family: Inter; font-weight: 200; word-wrap: break-word;
+}
+.Rec3{
+    left: 153.67px; top: 74px; position: absolute; color: #666666; font-size: 12px; font-family: Inter; font-weight: 300; word-wrap: break-word;
+}
