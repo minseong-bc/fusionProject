@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 페이지</title>
+    <style>
+        /* General styles */
+        @font-face {
+    font-family: 'HancomUljuBangudaePetroglyph';
+    font-style: 'normal';
+    src: url(fonts/HancomUljuBangudaePetroglyph.ttf);
+}
+        *{
+            box-sizing:border-box;
+            margin:0px;
+        }
+        body {
+            width:100vw;
+            height:100vh;
+            display:flex;
+            flex-direction:row;
+            justify-content:center;
+            align-items:center;
+        }
+        .container {
+           width:540px;
+           height: 900px;
+           border: 1px solid #AACDFF;
+           box-shadow: 7px 7px 39px rgba(0, 104, 255, 0.25);
+           border-radius: 20px;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           padding: 60px;
+        }
+
+        /* 로고 */
+        .logo {
+            position: absolute;
+            left: 2.6%;
+            top: 3.89%;
+            font-family: 'HancomUljuBangudaePetroglyph';
+            font-weight: 400;
+            font-size: 58px;
+            line-height: 67px;
+            color: #3D79EE;
+        }
+
+        .logo-subtext {
+            position: absolute;
+            left: 8.49%;
+            top: 7.96%;
+            font-family: 'HancomUljuBangudaePetroglyph';
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            color: #000000;
+        }
+        
+        .error{
+            color:red;
+            height: 10px;
+            font-size: 11px;
+        }
+
+        .inputbox{
+            width: 380px;
+            height: 60px;
+            background-color: white;
+            border-radius: 7px;
+            border: 1px solid #D2D2D2;
+            padding: 18px;
+            margin-top: 20px;
+        }
+
+        .inputbox::placeholder{
+            color:#797979;
+            font-size: 16px;
+        }
+
+        .phone_wrapper {
+            width:380px;
+            height:40px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        
+        .phoneNum{
+            width: 100px;
+            height: 40px;
+            border: 1px solid #D2D2D2;
+            border-radius: 7px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .token_wrapper{
+            width: 380px;
+            height: 40px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 20px;
+        }
+        
+        .token, .token_timer{
+            color:#0068FF;
+            font-size:18px;
+        }
+
+        #token_button, #token_timer_confirm_button {
+            width: 120px;
+            height: 40px;
+            border-radius: 7px;
+            margin-left: 20px;
+            border: 1px solid #D2D2D2;
+            font-size: 16px;
+        }
+
+        #signup_button {
+            width: 380px;
+            height: 75px;
+            border: 1px solid #D2D2D2;
+            border-radius: 10px;
+            font-size: 18px;
+            margin-top:20px;
+        }
+        .a{
+            margin-right: 320px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>회원가입</h3>
+        <!-- 로고 -->
+        <div class="logo">길벗</div>
+        <div class="logo-subtext">길을 함께 가는 동무, 같은 길을 가는 사람</div>
+        <div class="a" id="a">아이디</div>
+        <input class="inputbox" id="id" type="text" placeholder="아이디를 입력해 주세요."/>
+        <div class="error" id="error_id"></div>
+        <div class="a" id="a">이름</div>
+        <input class="inputbox" id="name" type="text" placeholder="이름을 입력해 주세요."/>
+        <div class="error" id="error_name"></div>
+        <div class="a" id="a">비밀번호</div>
+        <input class="inputbox" id="password1" type="text" placeholder="비밀번호를 입력해 주세요."/>
+        <div class="error" id="error_password1"></div>
+        <input class="inputbox" id="password2" type="text" placeholder="비밀번호를 다시 입력해 주세요."/>
+        <div class="error" id="error_password2"></div>
+        <div class="a" id="a">전화번호</div>
+        <div class="phone_wrapper">
+            <input id="phone1" class="phoneNum" type="text" onchange="changePhone1()" onkeyup="onchange()"/>
+
+            <input id="phone2" class="phoneNum" onchange="changePhone2()" onkeyup="onchange()"/>
+            <input id="phone3" class="phoneNum" onchange="changePhone3()" onkeyup="onchange()"/>
+        </div>
+
+        <div class="token_wrapper">
+            <div class="token" id="token">000000</div>
+            <button id="token_button" onclick="getToken()" disabled>인증번호 전송</button>
+        </div>
+
+        <div class="token_wrapper">
+            <div class="token_timer" id="token_timer">3:00</div>
+            <button id="token_timer_confirm_button" onclick="getTokenTimerConfirm()" disabled>인증완료</button>
+        </div>
+    <div class="footer">
+        <button id="signup_button" onclick="signup()" disabled>가입하기</button>
+    </div>
+    </div>
+</body>
+</html>
