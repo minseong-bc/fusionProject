@@ -1,111 +1,131 @@
-<div style="width: 1920px; height: 1690px; position: relative">
-    <div style="width: 1920px; height: 1080px; left: 0px; top: 0px; position: absolute; background: white"></div>
-    <div style="width: 1920px; height: 1525px; left: -1px; top: 269px; position: absolute; background: white"></div>
-    <div style="width: 1920px; height: 106px; left: 0px; top: 560px; position: absolute; background: white; border-top: 1px #3F78EB solid"></div>
-    <div style="width: 1920px; height: 180px; left: -1px; top: 0px; position: absolute">
-      <div style="width: 1920px; height: 176.98px; left: 0px; top: 3.02px; position: absolute; background: #3F78EB"></div>
-      <div style="width: 351px; height: 113.63px; left: 261px; top: 33.18px; position: absolute">
-        <div style="width: 351px; height: 105.59px; left: 0px; top: 0px; position: absolute; background: rgba(60, 120, 237, 0.86)"></div>
-        <div style="width: 105px; height: 86.48px; left: 26px; top: 27.15px; position: absolute; color: rgba(255, 255, 255, 0.86); font-size: 58px; font-family: Hancom Ulju Bangudae Petroglyph; font-weight: 400; word-wrap: break-word">길벗</div>
-        <div style="width: 185px; height: 14.08px; left: 139px; top: 71.40px; position: absolute; color: black; font-size: 12px; font-family: Hancom Ulju Bangudae Petroglyph; font-weight: 400; word-wrap: break-word">길을 함께 가는 동무, 같은 길을 가는 사람</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <script src="https://kit.fontawesome.com/366187f9eb.js"  crossorigin="anonymous"></script>
+    <style>
+        body{
+            margin: 0;
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+    
+  <div class="nav">
+      <div class="title-container">
+          <span class="maintitle" style="color: #FFFFFF">길벗</span>
+          <span class="mainsmalltitle" style="color: black;">길을 함께 가는 동무, 같은 길을 가는 사람</span>
+       </div>
+      <form class="search-box" action="" method="get">
+          <input class="search-txt" type="text" name="" placeholder="검색어를 입력하세요.">
+          <button class="search-btn" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+      </form>
+      <div class="nav-icons">
+          <div class="nav-login">
+              <i class="fa-solid fa-user fa-2x"></i> <span class="login-text">로그인</span>
+          </div>
+          <div class="nav-map"><i class="fa-solid fa-bus fa-2x"></i><span class="map-text">교통정보</span></div>
+          <div class="nav-mytrip"><i class="fa-regular fa-calendar-days fa-2x"></i><span class="mytrip-text">내 일정</span></div>
       </div>
-      <div style="width: 312px; height: 153.85px; left: 1342px; top: 0px; position: absolute">
-        <div style="width: 122px; height: 131.73px; left: 0px; top: 11.06px; position: absolute">
-          <div style="width: 122px; height: 131.73px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 30px; font-family: SF Pro; font-weight: 400; word-wrap: break-word">􀉩</div>
-          <div style="width: 50px; height: 21.12px; left: 35px; top: 92.51px; position: absolute; text-align: center; color: black; font-size: 18px; font-family: SF Pro; font-weight: 400; word-wrap: break-word">로그인</div>
-        </div>
-        <div style="width: 117px; height: 106.59px; left: 87px; top: 23.13px; position: absolute">
-          <div style="width: 117px; height: 106.59px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 25px; font-family: SF Pro; font-weight: 400; word-wrap: break-word">􀝉</div>
-          <div style="width: 67px; height: 21.12px; left: 25px; top: 80.45px; position: absolute; text-align: center; color: black; font-size: 18px; font-family: SF Pro; font-weight: 400; word-wrap: break-word">교통정보</div>
-        </div>
-        <div style="width: 159px; height: 153.85px; left: 153px; top: 0px; position: absolute">
-          <div style="width: 159px; height: 153.85px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 30px; font-family: SF Pro; font-weight: 400; word-wrap: break-word">􀉉</div>
-          <div style="width: 55px; height: 21.12px; left: 52px; top: 103.58px; position: absolute; text-align: center; color: black; font-size: 18px; font-family: SF Pro; font-weight: 400; word-wrap: break-word">내 일정</div>
-        </div>
+  </div>
+  
+  <div class="categoryContainer">
+      <div class="categoryDiv">
+          <div class="categoryItem">
+              <img src="./images/Icon1.png" class="icon" alt="아이콘 1">
+              <span class="category">지역별 여행지</span>
+          </div>
+          <div class="categoryItem">
+              <img src="./images/Icon2.png" class="icon" alt="아이콘 2">
+              <span class="category">여행지추천</span>
+          </div>
+          <div class="categoryItem">
+              <img src="./images/Icon3.png" class="icon" alt="아이콘 3">
+              <span class="category">여행정보</span>
+          </div>
+          <div class="categoryItem">
+              <img src="./images/Icon4.png" class="icon" alt="아이콘 4">
+              <span class="category">여행기사</span>
+          </div>
+          <div class="categoryItem">
+              <img src="./images/Icon5.png" class="icon" alt="아이콘 5">
+              <span class="category">여행지도</span>
+          </div>
       </div>
-      <div style="width: 670px; height: 70.39px; left: 625px; top: 50.28px; position: absolute">
-        <div style="width: 670px; height: 70.39px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 60px; border: 2px #3D79EE solid"></div>
-        <div style="width: 29px; height: 29.16px; left: 610px; top: 21.12px; position: absolute; text-align: center; color: #3D79EE; font-size: 24px; font-family: SF Pro; font-weight: 400; word-wrap: break-word">􀊫</div>
-      </div>
-    </div>
-    <div style="width: 1920px; height: 90px; left: -1px; top: 179px; position: absolute; border: 1px black solid">
-      <div style="width: 1920px; height: 90px; left: 0px; top: 0px; position: absolute; background: white; border-bottom: 1px #3F78EB solid"></div>
-      <div style="left: 676px; top: 17px; position: absolute; text-align: center; color: black; font-size: 25px; font-family: SF Pro; font-weight: 400; word-wrap: break-word">여행지 추천</div>
-      <div style="left: 910px; top: 17px; position: absolute; text-align: center; color: black; font-size: 25px; font-family: SF Pro; font-weight: 400; word-wrap: break-word">여행 정보</div>
-      <div style="left: 416px; top: 17px; position: absolute; text-align: center; color: black; font-size: 25px; font-family: SF Pro; font-weight: 400; word-wrap: break-word">지역별 여행지</div>
-      <div style="left: 1348px; top: 17px; position: absolute; text-align: center; color: black; font-size: 25px; font-family: SF Pro; font-weight: 400; word-wrap: break-word">여행 지도</div>
-      <div style="left: 1134px; top: 17px; position: absolute; text-align: center; color: black; font-size: 25px; font-family: SF Pro; font-weight: 400; word-wrap: break-word">여행 기사</div>
-      <div style="width: 22px; height: 21px; left: 647px; top: 21px; position: absolute; background: black"></div>
-      <div style="width: 14px; height: 20px; left: 392px; top: 21px; position: absolute; background: black"></div>
-      <div style="width: 12px; height: 20px; left: 1326px; top: 21px; position: absolute; background: black"></div>
-      <div style="width: 20px; height: 20px; left: 883px; top: 21px; position: absolute; background: black"></div>
-      <div style="width: 22px; height: 20px; left: 1105px; top: 21px; position: absolute; background: black"></div>
-    </div>
+  </div>
+<hr>
     <div style="width: 300px; height: 500px; left: 1297px; top: 623px; position: absolute; border-radius: 20px">
-      <div style="width: 300px; height: 500px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 20px"></div>
-      <img style="width: 300px; height: 350px; left: 0px; top: 0px; position: absolute; box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25); border-radius: 20px; border: 1px black solid" src="https://via.placeholder.com/300x350" />
-      <div style="width: 126px; left: 24px; top: 369px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">경기도 안성시</div>
-      <div style="width: 255px; left: 24px; top: 415px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">2024. 7. 20. ~ 10. 20. | 11:30~16:30</div>
-      <div style="width: 255px; left: 24px; top: 461px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">용설애(愛) FESTA</div>
-      <div style="width: 78px; left: 201px; top: 369px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">무료</div>
+      <div class="festival-contentbox"></div>
+      <img class="festival-image" src="https://via.placeholder.com/300x350" />
+      <div class="festival-contentregion">경기도 안성시</div>
+      <div class="festival-date">2024. 7. 20. ~ 10. 20. | 11:30~16:30</div>
+      <div class="festival-title">용설애(愛) FESTA</div>
+      <div class="festival-charge">무료</div>
     </div>
     <div style="width: 300px; height: 500px; left: 1317px; top: 1234px; position: absolute; border-radius: 20px">
-      <div style="width: 300px; height: 500px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 20px"></div>
-      <img style="width: 300px; height: 350px; left: 0px; top: 0px; position: absolute; box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25); border-radius: 20px; border: 1px black solid" src="https://via.placeholder.com/300x350" />
-      <div style="width: 126px; left: 24px; top: 369px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">전라북도 전주시</div>
-      <div style="width: 255px; left: 24px; top: 415px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">2024. 9. 20. ~ 9. 22. | 14:00 ~ 21:00</div>
-      <div style="width: 255px; left: 24px; top: 461px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">전주 세계 평화 춤 페스티벌</div>
-      <div style="width: 78px; left: 201px; top: 369px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">무료</div>
+      <div class="festival-contenttitle"></div>
+      <img class="festival-image" src="https://via.placeholder.com/300x350" />
+      <div class="festival-contentregion">전라북도 전주시</div>
+      <div class="festival-date">2024. 9. 20. ~ 9. 22. | 14:00 ~ 21:00</div>
+      <div class="festival-title">전주 세계 평화 춤 페스티벌</div>
+      <div class="festival-charge">무료</div>
     </div>
     <div style="width: 300px; height: 500px; left: 617px; top: 623px; position: absolute; border-radius: 20px">
-      <div style="width: 300px; height: 500px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 20px"></div>
-      <img style="width: 300px; height: 350px; left: 0px; top: 0px; position: absolute; box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25); border-radius: 20px; border: 1px black solid" src="https://via.placeholder.com/300x350" />
-      <div style="width: 126px; left: 24px; top: 369px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">경기도 안성시</div>
-      <div style="width: 255px; left: 24px; top: 415px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">2024. 9. 13. ~ 9. 15. | 10:00~19:00</div>
-      <div style="width: 255px; left: 24px; top: 461px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">안성맞춤포도축제</div>
-      <div style="width: 78px; left: 201px; top: 369px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">무료</div>
+      <div class="festival-contentbox"></div>
+      <img class="festival-image" src="https://via.placeholder.com/300x350" />
+      <div class="festival-contentregion">경기도 안성시</div>
+      <div class="festival-date">2024. 9. 13. ~ 9. 15. | 10:00~19:00</div>
+      <div class="festival-title">안성맞춤포도축제</div>
+      <div class="festival-charge">무료</div>
     </div>
     <div style="width: 300px; height: 500px; left: 637px; top: 1234px; position: absolute; border-radius: 20px">
-      <div style="width: 300px; height: 500px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 20px"></div>
-      <img style="width: 300px; height: 350px; left: 0px; top: 0px; position: absolute; box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25); border-radius: 20px; border: 1px black solid" src="https://via.placeholder.com/300x350" />
-      <div style="width: 126px; left: 24px; top: 369px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">강원도 홍천군</div>
-      <div style="width: 255px; left: 24px; top: 415px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">2024. 9. 13. ~ 9. 15. | 10:00~19:00</div>
-      <div style="width: 255px; left: 24px; top: 461px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">홍천동키마을 메밀꽃축제: 삼포 가는 길</div>
-      <div style="width: 78px; left: 201px; top: 369px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">7000원</div>
+      <div class="festival-contentbox"></div>
+      <img class="festival-image" src="https://via.placeholder.com/300x350" />
+      <div class="festival-contentregion">강원도 홍천군</div>
+      <div class="festival-date">2024. 9. 13. ~ 9. 15. | 10:00~19:00</div>
+      <div class="festival-title">홍천동키마을 메밀꽃축제: 삼포 가는 길</div>
+      <div class="festival-charge">7000원</div>
     </div>
     <div style="width: 300px; height: 500px; left: 957px; top: 623px; position: absolute; border-radius: 20px">
-      <div style="width: 300px; height: 500px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 20px"></div>
-      <img style="width: 300px; height: 350px; left: 0px; top: 0px; position: absolute; box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25); border-radius: 20px; border: 1px black solid" src="https://via.placeholder.com/300x350" />
-      <div style="width: 126px; left: 24px; top: 369px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">경상북도 문경시</div>
-      <div style="width: 255px; left: 24px; top: 415px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">2024. 9. 13. ~ 9. 15. | 10:00~20:00</div>
-      <div style="width: 255px; left: 24px; top: 461px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">문경오미자축제</div>
-      <div style="width: 78px; left: 201px; top: 369px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">무료</div>
+      <div class="festival-contentbox"></div>
+      <img class="festival-image" src="https://via.placeholder.com/300x350" />
+      <div class="festival-contentregion">경상북도 문경시</div>
+      <div class="festival-date">2024. 9. 13. ~ 9. 15. | 10:00~20:00</div>
+      <div class="festival-title">문경오미자축제</div>
+      <div class="festival-charge">무료</div>
     </div>
     <div style="width: 300px; height: 500px; left: 977px; top: 1234px; position: absolute; border-radius: 20px">
-      <div style="width: 300px; height: 500px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 20px"></div>
-      <img style="width: 300px; height: 350px; left: 0px; top: 0px; position: absolute; box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25); border-radius: 20px; border: 1px black solid" src="https://via.placeholder.com/300x350" />
-      <div style="width: 126px; left: 24px; top: 369px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">부산광약시</div>
-      <div style="width: 255px; left: 24px; top: 415px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">2024. 9. 21. ~ 9. 22. | 10:00~20:00</div>
-      <div style="width: 255px; left: 24px; top: 461px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">부산청년주간 큰울림 페스티벌</div>
-      <div style="width: 78px; left: 201px; top: 369px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">요금</div>
+      <div class="festival-contentbox"></div>
+      <img class="festival-image" src="https://via.placeholder.com/300x350" />
+      <div class="festival-contentregion">부산광역시</div>
+      <div class="festival-date">2024. 9. 21. ~ 9. 22. | 10:00~20:00</div>
+      <div class="festival-title">부산청년주간 큰울림 페스티벌</div>
+      <div class="festival-charge">요금</div>
     </div>
     <div style="width: 300px; height: 500px; left: 277px; top: 623px; position: absolute; border-radius: 20px">
-      <div style="width: 300px; height: 500px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 20px"></div>
-      <img style="width: 300px; height: 350px; left: 0px; top: 0px; position: absolute; box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25); border-radius: 20px; border: 1px black solid" src="https://via.placeholder.com/300x350" />
-      <div style="width: 126px; left: 24px; top: 369px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">전라북도 전주시</div>
-      <div style="width: 255px; left: 24px; top: 415px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">2024. 9. 10. ~ 9. 12. | 14:00 ~ 22:00</div>
-      <div style="width: 255px; left: 24px; top: 461px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">전북특별자치도 청년축제</div>
-      <div style="width: 78px; left: 201px; top: 369px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">무료</div>
+      <div class="festival-contentbox"></div>
+      <img class="festival-image" src="https://via.placeholder.com/300x350" />
+      <div class="festival-contentregion">전라북도 전주시</div>
+      <div class="festival-date">2024. 9. 10. ~ 9. 12. | 14:00 ~ 22:00</div>
+      <div class="festival-title">전북특별자치도 청년축제</div>
+      <div class="festival-charge">무료</div>
     </div>
     <div style="width: 300px; height: 500px; left: 297px; top: 1234px; position: absolute; border-radius: 20px">
-      <div style="width: 300px; height: 500px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 20px"></div>
-      <img style="width: 300px; height: 350px; left: 0px; top: 0px; position: absolute; box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25); border-radius: 20px; border: 1px black solid" src="https://via.placeholder.com/300x350" />
-      <div style="width: 126px; left: 24px; top: 369px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">경기도 이천시</div>
-      <div style="width: 255px; left: 24px; top: 415px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">2018. 10. 17. ~ 10. 21. |</div>
-      <div style="width: 255px; left: 24px; top: 461px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">제20회 이천 쌀 문화축제</div>
-      <div style="width: 78px; left: 201px; top: 369px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; word-wrap: break-word">요금</div>
+      <div class="festival-contentbox"></div>
+      <img class="festival-image" src="https://via.placeholder.com/300x350" />
+      <div class="festival-contentregion">경기도 이천시</div>
+      <div class="festival-date">2018. 10. 17. ~ 10. 21. |</div>
+      <div class="festival-title">제20회 이천 쌀 문화축제</div>
+      <div class="festival-charge">요금</div>
     </div>
-    <div style="width: 570px; height: 160px; left: 675px; top: 320px; position: absolute">
+    <div class="filterbox">
       <div style="width: 570px; height: 160px; left: 0px; top: 0px; position: absolute; background: #3D79EE"></div>
       <div style="width: 265px; height: 45.71px; left: 255px; top: 14.86px; position: absolute">
         <div style="width: 80px; height: 45.71px; left: 0px; top: 0px; position: absolute; background: white; border: 1px black solid"></div>
@@ -130,6 +150,7 @@
         <div style="width: 48px; height: 17.14px; left: 8px; top: 14.86px; position: absolute; color: black; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">축제 이름</div>
       </div>
     </div>
-    <div style="width: 334px; height: 0px; left: 1620px; top: 830px; position: absolute; border: 2px black solid"></div>
-    <div style="width: 660.01px; height: 0px; left: 1286px; top: 385px; position: absolute; border: 2px black solid"></div>
+    
   </div>
+</body>
+</html>
