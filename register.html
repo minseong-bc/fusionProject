@@ -91,12 +91,12 @@
         }
         
         .phoneNum{
-            width: 100px;
+            width: 300px;
             height: 40px;
             border: 1px solid #D2D2D2;
             border-radius: 7px;
             font-size: 16px;
-            text-align: center;
+            text-align: left;
         }
 
         .token_wrapper{
@@ -135,6 +135,12 @@
             margin-right: 320px;
             margin-top: 30px;
         }
+        #token_button:hover {
+            background-color: #e0e0e0; /* 버튼 hover 시 배경색 변경 */
+        }
+        #token_button, #token_timer_confirm_button, #signup_button {
+            cursor: pointer; /* 포인터로 변경 */
+        }
     </style>
 </head>
 <body>
@@ -150,21 +156,18 @@
         <input class="inputbox" id="name" type="text" placeholder="이름을 입력해 주세요."/>
         <div class="error" id="error_name"></div>
         <div class="a" id="a">비밀번호</div>
-        <input class="inputbox" id="password1" type="text" placeholder="비밀번호를 입력해 주세요."/>
+        <input class="inputbox" id="password1" type="password" placeholder="비밀번호를 입력해 주세요."/>
         <div class="error" id="error_password1"></div>
-        <input class="inputbox" id="password2" type="text" placeholder="비밀번호를 다시 입력해 주세요."/>
+        <input class="inputbox" id="password2" type="password" placeholder="비밀번호를 다시 입력해 주세요."/>
         <div class="error" id="error_password2"></div>
         <div class="a" id="a">전화번호</div>
         <div class="phone_wrapper">
-            <input id="phone1" class="phoneNum" type="text" onchange="changePhone1()" onkeyup="onchange()"/>
-
-            <input id="phone2" class="phoneNum" onchange="changePhone2()" onkeyup="onchange()"/>
-            <input id="phone3" class="phoneNum" onchange="changePhone3()" onkeyup="onchange()"/>
+            <input id="phone1" class="phoneNum" name="phone1" type="text" maxlength="13" oninput="autoHyphen2(this)" onchange="changePhone1()" onkeyup="onchange()">
         </div>
 
-        <div class="token_wrapper">
+        <div class="token_wrapper"> 
             <div class="token" id="token">000000</div>
-            <button id="token_button" onclick="getToken()" disabled>인증번호 전송</button>
+            <button type="submit" disabled="true" id="token_button" onclick="btnActive()" >인증번호 전송</button>
         </div>
 
         <div class="token_wrapper">
@@ -175,5 +178,6 @@
         <button id="signup_button" onclick="signup()" disabled>가입하기</button>
     </div>
     </div>
+    <script src="script/function.js"></script>
 </body>
 </html>
