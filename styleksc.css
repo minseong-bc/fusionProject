@@ -1,0 +1,219 @@
+html,body{ width: 100%; height: 100%; margin: 0;  overflow: hidden;}
+
+@font-face {
+    font-family: 'HancomUljuBangudaePetroglyph';
+    font-style: 'normal';
+    src: url(fonts/HancomUljuBangudaePetroglyph.ttf);
+}
+.nav {
+    background-color: #3C78ED;
+    height : 130px;
+    width:100%;
+    margin-bottom:25px;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.title-container {
+    display: flex;
+    align-items: center;
+    padding-left: 330px; 
+}
+.maintitle{
+    position: fixed;
+    font-family: 'HancomUljuBangudaePetroglyph';
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.mainsmalltitle{
+    position: fixed;
+    font-family: 'HancomUljuBangudaePetroglyph';
+    padding-top: 28px;
+    padding-left: 75px;
+    font-size: small;
+    cursor: pointer;
+}
+.search-box {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 500px;
+    background: white;
+    border-radius: 40px;
+    padding: 10px;
+}
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0px;
+    color: #797979;
+    font-size: 16px;
+    line-height: 30px;
+    width: 100%;
+}
+.search-btn{
+    color: #3C78ED;
+    width: 40px;
+    height: 100%;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-icons {
+    margin-right: 550px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-login  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5px;
+    padding-top: 10px;
+    cursor: pointer;
+    position: fixed;
+}
+.nav-map{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 70px;
+    padding-top: 10px;
+    cursor: pointer;
+    position: fixed; 
+}
+.nav-mytrip{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 145px;
+    padding-top: 10px;
+    cursor: pointer;
+    position: fixed; 
+}
+.nav-login .login-text,
+.nav-map .map-text,
+.nav-mytrip .mytrip-text {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.menu{
+    text-align:center;
+    font-size:10px;
+    font-weight:bold;
+    
+}
+hr {
+    background :#3F78EB;
+    height:1px;
+    border:0;
+    margin-top:30px;
+}
+.categoryContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+.categoryDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 55%;
+    gap: 50px;
+}
+
+.categoryItem {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    cursor: pointer;
+}
+
+.icon {
+    width: 20px; 
+    height: 20px; 
+}
+
+.category {
+    font-size: 20px;
+    
+}
+
+.iconCantainer{
+    height: 20px; top: 25px; position: absolute;
+}
+
+.slide-content {
+    text-align: center;
+}
+.main-title{
+    margin-top: 35px;
+    margin-left: 350px;
+    font-weight: bold;
+    font-size: 30px;
+}
+.slide{
+    width: 100%;
+    height: 350px;
+}
+.content-title {
+    margin-top: 10px;
+    font-weight: bold; 
+    font-size: 22px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.content-info {
+    margin-top: 5px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.swiper-container{
+    
+    width: 1400px;
+    height: 500px;
+    overflow: hidden;
+    margin-left: 270px;
+    
+}
+
+.swiper-slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100%/4);
+    height: 100%;
+    cursor: pointer;
+}
+.swiper-button-next,
+.swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
