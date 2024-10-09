@@ -1,4 +1,4 @@
-html,body{ width: 100vw; height: 100vh; margin: 0; padding: 0; }
+html,body{ margin: 0; padding: 0; width: 100vw; height: 100vh;}
 
 @font-face {
     font-family: 'HancomUljuBangudaePetroglyph';
@@ -479,7 +479,7 @@ hr {
     width: 100px; height: 50px; left: 17px; top: 25px; position: relative; background: #57667E; border-radius: 40px;
 }
 .Select{
-    width:5vw; height:5vh; left: 1vw; top: 5vh; position: absolute; background: #57667E; border-radius: 40px; align-items:center;
+    width:5vw; height:5vh; left: 1vw; top: 1vh; position: absolute; background: #57667E; border-radius: 40px; align-items:center;
 }
 .area{
     position: absolute; color: #666666; font-size: 25px; font-family: Inter; font-weight: 400; word-wrap: break-word;
@@ -500,9 +500,9 @@ hr {
 .row3{top: 147px;}
 
 .Row1{top: 5vh;}
-.Row2{top: 15vh;}
-.Row3{top: 25vh;}
-.Row4{top: 35vh;}
+.Row2{top: 12vh;}
+.Row3{top: 18vh;}
+.Row4{top: 24vh;}
 .Col1{
     width: 109px; height: 26px; left: 15%; top: 88%; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word;
 }
@@ -539,7 +539,7 @@ hr {
     width: 20px; height: 0px; top: 539.48px; position: absolute; transform: rotate(-90deg); transform-origin: 0 0; border: 1px #666666 solid
 }
 .DivideLine{
-    width: 28vw; height: 0px; left: 3vw; top: 41vh; position: absolute; border: 1px black solid
+    width: 28vw; height: 0px; left: 3vw; top: 35vh; position: absolute; border: 1px black solid
 }
 .underLine{
     width: 74.01px; height: 0px; left: 2%; top: 95%; position: absolute; border: 1.5px black solid;
@@ -589,10 +589,10 @@ hr {
     color: #57667E; font-size: 38px; font-family: Source Sans Pro; font-weight: 400; word-wrap: break-word; text-align: center; 
 }
 .Theme{
-    width: 33vw; height: 65vh; top: 79.5vh; left: 72vw; transform: translate(-30%, -50%); position: absolute; background: #F1F1F1
+    width: 33vw; height: 59vh; top: 77vh; left: 72vw; transform: translate(-30%, -50%); position: absolute; background: #F1F1F1;
 }
 .areaFrame{
-    width: 50vw; height:50vh; top: 25vh; left: 24vw; transform: translate(-50%, -50%); position: absolute;
+    width: 25vw; height:50vh; top: 1vh; left: 1vw;  position: absolute; 
 }
 .sortDiv{
     width: 40%; height: 100%; top: 50%; left: 82%; transform: translate(-50%, -50%); position: absolute;
@@ -616,9 +616,24 @@ hr {
     width: 79px; height: 41px; left: 10vw; top: 1vh; position: absolute; color: black; font-size: 36px; font-family: Inter; font-weight: 400; word-wrap: break-word;
 }
 .contentDiv{
-    margin: 0; width: 70vw; height: 55vh; position: absolute; top: 40%; left: 0px;
+    margin: 0; width: 70vw; height: 55vh; position: absolute; top: 40vh; left: 0px;
 }
 .result-sort-bar{
     width: 45vw; height: 7vh; top: 13%; left: 11vw; position: absolute;
     width: 45vw; height: 7vh; top: 13%; left: 15%; position: absolute;
+}
+.articleDiv{
+    width: 55vw; height: 25vh; left: 10vw; top: 15vh; position: absolute
+}
+.article-image{
+    width: 9vw; height: 15vh; left: 1vw; top: 2vh; position: absolute
+}
+.article-title{
+    width: 25vw; height: 5vh; left: 12vw; top: 2vh; position: absolute; color: black; font-size: 23px; font-family: Karantina; font-weight: 400; line-height: 35px; word-wrap: break-word
+}
+.article-date{
+    width: 11vw; height: 2vh; left: 30px; top: 188px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; line-height: 35px; word-wrap: break-word
+}
+.article-text{
+    width: 30vw; height: 20vh; left: 12vw; top: 10vh; position: absolute; color: black; font-size: 15px; font-family: Karantina; font-weight: 400; line-height: 35px; word-wrap: break-word
 }

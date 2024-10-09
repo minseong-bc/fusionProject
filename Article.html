@@ -11,104 +11,123 @@
 <body>
   <div class="Entire">
     <!-- 페이지 공통 부분 -->
-    <div class="nav">
+    <div class="nav"> <!-- height : 15%; -->
       <div class="title-container">
         <span class="maintitle" style="color: #FFFFFF">길벗</span>
         <span class="mainsmalltitle" style="color: black;">길을 함께 가는 동무, 같은 길을 가는 사람</span>
       </div>
+
       <form class="search-box" action="" method="get">
         <input class="search-txt" type="text" name="" placeholder="검색어를 입력하세요.">
         <button class="search-btn" type="submit">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
-      <div class="nav-icons">,
+
+      <div class="nav-icons">
+
         <div class="nav-login">
           <i class="fa-solid fa-user fa-2x"></i>
-          <span class="login-text">로그인</span>
         </div>
+        
         <div class="nav-map">
           <i class="fa-solid fa-bus fa-2x"></i>
-          <span class="map-text">교통정보</span>
         </div>
+
         <div class="nav-mytrip">
           <i class="fa-regular fa-calendar-days fa-2x"></i>
+        </div>
+
+        <div class="nav-text">
+          <span class="login-text">로그인</span>
+          <span class="map-text">교통정보</span>
           <span class="mytrip-text">내 일정</span>
         </div>
       </div>
     </div>
-  
-    <div class="main">
-      <div class="menu">
-        <span class="category">지역별 여행지</span>
-        <span class="category">여행지추천</span>
-        <span class="category">여행정보</span>
-        <span class="category">여행기사</span>
-        <span class="category">여행지도</span>
+    
+    <div class="menu"> <!-- height : 10%; -->
+      <span class="category">지역별 여행지</span>
+      <span class="category">여행지추천</span>
+      <span class="category">여행정보</span>
+      <span class="category">여행기사</span>
+      <span class="category">여행지도</span>
+      <hr>
+    </div>
+    <!-- 페이지 공통 부분 -->
+    <div class="contentDiv" style="top: 30vh;">
+
+      <div class="articleDiv">
+        <img class="article-image" src="./images/bulguksa.png" />
+        <div class="article-title">내˙외국인이 한국에서 많이 찾는 여름 휴가지는?!</div>
+        <div class="article-text" style="text-decoration: underline;">
+          부킹닷컴이 인바운드 및 한국인 여행객들(2024년 8월1일~9월1일 투숙 기준)의 검색 데이터를 분석한 결과를 바탕으로 2024년 여름철 국내 여행 트렌드를 공개했다.인바운드 여행객, 바다 및 역사문화 여행 찾아한국을 찾는 외래 관광객들이 가장 많이 검색한 여행 ...
+        </div>
+        <div class="article-date">김무신 기자 2024. 8. 10</div>       
+      </div>
+
+      <div class="articleDiv" style="top: 40vh;">
+        
+        <img class="article-image" src="./images/cafe.png" />
+        <div class="article-title">경기도 카페, 추석 연휴 쉬어가기 좋은 서울 근교 베이커리 카페 ...</div>
+        <div class="article-text">온 가족이 한 자리에 모이는 추석 연휴, 커피 한 잔 마시면서 그간의 안부를 묻는<br/>시간을 가져보세요.</div>
+        <div class="article-date">최석진 기자 2024. 9. 11</div>
+      </div>
+
+    
+      <div class="result-text">전체</div>
+      <div class="divideLines" style="top: 7.5vh"></div>
+      <div class="divideLines" style="top: 15vh"></div>
+      <div class="divideLines" style="top: 40vh"></div>
+      <div class="divideLines" style="top: 65vh"></div>
+
+      <div class="result-sort-bar">
+        <div class="searchTotal">
+          <span class="result" style="color: black;">총</span>
+          <span class="result" style="color: #0C98CD;">1,200</span>
+          <span class="result" style="color: black;">건</span>
+        </div>
+
+        <div class="sortDiv">
+          <div class="filterOpt" style="top: 4vh; left: 4vh;  color: black;">
+            최신순
+            <div class="underLine"></div>
+          </div>
+          <div class="divideLine" style="top: 5.5vh; left: 11vh; "></div>
+          <div class="filterOpt" style="top: 4vh; left: 18vh; color: #666666">거리순</div>
+          <div class="divideLine" style="top: 5.5vh; left: 24vh;"></div>
+          <div class="filterOpt" style="top: 4vh; left: 30vh;  color: #666666">인기순</div>
+        </div> 
       </div>
     </div>
-    <hr>
-    <!-- 페이지 공통 부분 -->
-    <div style="width: 892px; height: 411px; left: 356px; top: 478px; position: absolute">
-        <div class="Rectangle32" style="width: 892px; height: 261px; left: 0px; top: 0px; position: absolute; background: white; "></div>
-        <img class="Image" style="width: 150px; height: 150px; left: 30px; top: 30px; position: absolute" src="./images/bulguksa.png" />
-        <div style="width: 574px; height: 30px; left: 210px; top: 30px; position: absolute; color: black; font-size: 23px; font-family: Karantina; font-weight: 400; line-height: 35px; word-wrap: break-word">내˙외국인이 한국에서 많이 찾는 여름 휴가지는?!</div>
-        <div style="width: 574px; height: 90px; left: 225px; top: 90px; position: absolute">
-            <span style="color: black; font-size: 15px; font-family: Karantina; font-weight: 400; text-decoration: underline; line-height: 35px; word-wrap: break-word;" >부킹닷컴이 인바운드 및 한국인 여행객들(2024년 8월1일~9월1일 투숙 기준)의 검색 데이터를 분석한 결과를 바탕으로 2024년 여름철 국내 여행 트렌드를 공개했다.인바운드 여행객, 바다 및 역사문화 여행 찾아한국을 찾는 외래 관광객들이 가장 많이 검색한 여행</span>
-            <span style="color: black; font-size: 15px; font-family: Karantina; font-weight: 400; line-height: 35px; word-wrap: break-word">...</span>
+
+    <div class="Theme" style="top: 55.5vh; height: 35vh;">
+      <div class="areaFrame">
+        <div class="Select Row1" style="left: 2vw; top: 4.5vh">
+          <div class="Area" style="left: 1.5vw; top:1vh; color: white;">전체</div>
         </div>
-        <div style="width: 200px; height: 28px; left: 15px; top: 188px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; line-height: 35px; word-wrap: break-word">김무신 기자 2024 - 08 - 10</div>
-        <div style="width: 170px; height: 25px; left: 30px; top: 224px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; line-height: 35px; word-wrap: break-word">기타</div>
+        <div class="Area Row1" style="left: 10vw;">서울</div>
+        <div class="Area Row1" style="left: 16vw;">경기</div>
+        <div class="Area Row1" style="left: 22vw;">인천</div>
+        <div class="Area Row1" style="left: 28vw;">세종</div>
+
+        <div class="Area Row2" style="left: 3.5vw;">부산</div>
+        <div class="Area Row2" style="left: 10vw;">대구</div>
+        <div class="Area Row2" style="left: 16vw;">울산</div>
+        <div class="Area Row2" style="left: 22vw;">대전</div>
+        <div class="Area Row2" style="left: 28vw;">강원</div>
+        
+        <div class="Area Row3" style="left: 3.5vw;">충북</div>
+        <div class="Area Row3" style="left: 10vw;">충남</div>
+        <div class="Area Row3" style="left: 16vw;">전북</div>
+        <div class="Area Row3" style="left: 22vw;">전남</div>
+        <div class="Area Row3" style="left: 28vw;">경남</div>
+
+        <div class="Area Row4" style="left: 3.5vw;">경북</div>
+        <div class="Area Row4" style="left: 10vw;">제주</div>
+
+      </div>
     </div>
-    <div style="width: 892px; height: 411px; left: 356px; top: 739px; position: absolute">
-        <div class="Rectangle32" style="width: 892px; height: 261px; left: 0px; top: 0px; position: absolute; background: white;"></div>
-        <img class="Image" style="width: 150px; height: 150px; left: 30px; top: 30px; position: absolute" src="./images/cafe.png" />
-        <div style="width: 574px; height: 30px; left: 210px; top: 30px; position: absolute; color: black; font-size: 23px; font-family: Karantina; font-weight: 400; line-height: 35px; word-wrap: break-word">경기도 카페, 추석 연휴 쉬어가기 좋은 서울 근교 베이커리 카페 ...</div>
-        <div style="width: 574px; height: 90px; left: 210px; top: 90px; position: absolute; color: black; font-size: 15px; font-family: Karantina; font-weight: 400; line-height: 35px; word-wrap: break-word">온 가족이 한 자리에 모이는 추석 연휴, 커피 한 잔 마시면서 그간의 안부를 묻는<br/>시간을 가져보세요.</div>
-        <div style="width: 169px; height: 28px; left: 30px; top: 188px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; line-height: 35px; word-wrap: break-word">최기사 2024. 9. 11.</div>
-        <div style="width: 170px; height: 25px; left: 30px; top: 224px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; line-height: 35px; word-wrap: break-word">기타</div>
-    </div>
-    <div style="width: 486px; height: 408px; left: 1274px; top: 369px; position: absolute">
-        <div style="width: 486px; height: 408px; left: 0px; top: 0px; position: absolute; background: #F1F1F1"></div>
-        <div style="width: 85px; height: 50px; left: 50px; top: 43px; position: absolute">
-            <div class="Rectangle16" style="width: 80px; height: 50px; left: 0px; top: 0px; position: absolute; background: #57667E; border-radius: 40px"></div>
-        <div style="width: 62px; height: 26px; left: 23px; top: 12px; position: absolute; color: white; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">전체</div>
-        </div>
-        <div class="Filter" style="width: 40px; height: 26px; left: 244px; top: 149px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">울산</div>
-        <div class="Filter" style="width: 40px; height: 26px; left: 321px; top: 149px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">대전</div>
-        <div class="Filter" style="width: 40px; height: 26px; left: 166px; top: 149px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">대구</div>
-        <div class="Filter" style="width: 40px; height: 26px; left: 397px; top: 55px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">세종</div>
-        <div class="Filter" style="width: 40px; height: 26px; left: 321px; top: 55px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">인천</div>
-        <div class="Filter" style="width: 40px; height: 26px; left: 244px; top: 55px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">경기</div>
-        <div class="Filter" style="width: 40px; height: 26px; left: 166px; top: 55px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">서울</div>
-        <div class="Filter" style="width: 40px; height: 26px; left: 244px; top: 243px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">강원</div>
-        <div class="Filter" style="width: 40px; height: 26px; left: 397px; top: 243px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">전남</div>
-        <div class="Filter" style="width: 40px; height: 26px; left: 244px; top: 331px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">제주</div>
-        <div class="Filter" style="width: 40px; height: 26px; left: 166px; top: 331px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">경북</div>
-        <div class="Filter" style="width: 40px; height: 26px; left: 70px; top: 331px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">경남</div>
-        <div class="Filter" style="width: 40px; height: 26px; left: 321px; top: 243px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">전북</div>
-        <div class="Filter" style="width: 40px; height: 26px; left: 166px; top: 243px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">충남</div>
-        <div class="Filter" style="width: 40px; height: 26px; left: 70px; top: 243px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">충북</div>
-        <div class="Filter" style="width: 40px; height: 26px; left: 397px; top: 149px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">강원</div>
-        <div class="Filter" style="width: 41px; height: 26px; left: 70px; top: 149px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">부산</div>
-    </div>
-    <div style="width: 79px; height: 41px; left: 357px; top: 322px; position: absolute; color: black; font-size: 36px; font-family: Inter; font-weight: 400; word-wrap: break-word">전체</div>
-    <div class="Line2" style="width: 892px; height: 0px; left: 356px; top: 380px; position: absolute; border: 0.50px #7D7D7D solid"></div>
-    <div class="Line2" style="width: 892px; height: 0px; left: 356px; top: 460px; position: absolute; border: 0.50px #7D7D7D solid"></div>
-    <div class="Line2" style="width: 892px; height: 0px; left: 356px; top: 750px; position: absolute; border: 0.50px #7D7D7D solid"></div>
-    <div class="Line2" style="width: 892px; height: 0px; left: 356px; top: 1020px; position: absolute; border: 0.50px #7D7D7D solid"></div>
-    <div class="1200" style="left: 356px; top: 396px; position: absolute">
-        <span style="color: black; font-size: 25px; font-family: Inter; font-weight: 400; word-wrap: break-word">총</span><span style="color: #0C98CD; font-size: 25px; font-family: Inter; font-weight: 400; word-wrap: break-word">1,200</span>
-        <span style="color: black; font-size: 25px; font-family: Inter; font-weight: 400; word-wrap: break-word">건</span>
-    </div>
-    <div class="Group2" style="left: 827px; top: 395px; position: absolute">
-        <div style="left: 0px; top: 0px; position: absolute; color: black; font-size: 25px; font-family: Inter; font-weight: 400; word-wrap: break-word; width: 75px;">최신순</div>
-        <div style="left: 99px; top: 1px; position: absolute; color: #666666; font-size: 25px; font-family: Inter; font-weight: 400; word-wrap: break-word; width: 75px;">거리순</div>
-        <div style="left: 198px; top: 1px; position: absolute; color: #666666; font-size: 25px; font-family: Inter; font-weight: 400; word-wrap: break-word; width: 75px;">인기순</div>
-        <div class="Line4" style="width: 20px; height: 0px; left: 84px; top: 26.48px; position: absolute; transform: rotate(-90deg); transform-origin: 0 0; border: 1px #666666 solid"></div>
-        <div class="Line5" style="width: 20px; height: 0px; left: 184px; top: 26px; position: absolute; transform: rotate(-90deg); transform-origin: 0 0; border: 1px #666666 solid"></div>
-        <!-- <div style="width: 74.01px; height: 0px; left: 1299px; top: 544px; position: absolute; border: 1.5px black solid"></div> 밑줄 넣었는데 안보임--> 
-    </div>                      
-  </div>
+</div>
 </body>
 </html>
