@@ -479,13 +479,13 @@ hr {
     width: 100px; height: 50px; left: 17px; top: 25px; position: relative; background: #57667E; border-radius: 40px;
 }
 .Select{
-    width: 4vw; height: 4vh; left: 3vw; top: 5.4vh; position: absolute; background: #57667E; border-radius: 40px;
+    width:5vw; height:5vh; left: 1vw; top: 5vh; position: absolute; background: #57667E; border-radius: 40px; align-items:center;
 }
 .area{
     position: absolute; color: #666666; font-size: 25px; font-family: Inter; font-weight: 400; word-wrap: break-word;
 }
 .Area{
-    width: 62px; height: 26px; position: absolute; color: black; font-size: 1.4em; font-family: Inter; font-weight: 400; word-wrap: break-word;
+    width: 5vw; height: 5vh; position: absolute; color: black; font-size: 1.4em; font-family: Inter; font-weight: 400; word-wrap: break-word;
 }
 
 .col1{left: 36px;}
@@ -499,10 +499,10 @@ hr {
 .row2{top: 92px;}
 .row3{top: 147px;}
 
-.Row1{top: 55px;}
-.Row2{top: 149px;}
-.Row3{top: 243px;}
-.Row4{top: 331px;}
+.Row1{top: 5vh;}
+.Row2{top: 15vh;}
+.Row3{top: 25vh;}
+.Row4{top: 35vh;}
 .Col1{
     width: 109px; height: 26px; left: 15%; top: 88%; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word;
 }
@@ -513,6 +513,7 @@ hr {
     width: 1189px; height: 0px; left: 380px; position: absolute; border: 0.50px #7D7D7D solid;
 }
 .divideLines{
+    width: 45vw; height: 0px; left: 15%; position: absolute; border: 0.50px #7D7D7D solid;
     width: 45vw; height: 0px; left: 15%; position: absolute; border: 0.50px #7D7D7D solid;
 }
 .title{
@@ -531,14 +532,14 @@ hr {
     font-size: 25px; font-family: Inter; font-weight: 400; word-wrap: break-word;
 }
 .filterOpt{
-    width: 75px; height: 33px; top: 514px; position: absolute; font-size: 25px; font-family: Inter; font-weight: 400; word-wrap: break-word;
+    width: 75px; height: 33px; top: 50vh; position: absolute; font-size: 25px; font-family: Inter; font-weight: 400; word-wrap: break-word; transform: translate(-50%, -50%);
 }
 
 .divideLine{
     width: 20px; height: 0px; top: 539.48px; position: absolute; transform: rotate(-90deg); transform-origin: 0 0; border: 1px #666666 solid
 }
 .DivideLine{
-    width: 466px; height: 0px; left: 22px; top: 390px; position: absolute; border: 1px black solid
+    width: 28vw; height: 0px; left: 3vw; top: 41vh; position: absolute; border: 1px black solid
 }
 .underLine{
     width: 74.01px; height: 0px; left: 2%; top: 95%; position: absolute; border: 1.5px black solid;
@@ -588,16 +589,16 @@ hr {
     color: #57667E; font-size: 38px; font-family: Source Sans Pro; font-weight: 400; word-wrap: break-word; text-align: center; 
 }
 .Theme{
-    width: 30vw; height: 65vh; top: 79.5vh; left: 72vw; transform: translate(-50%, -50%); position: absolute; background: #F1F1F1
+    width: 33vw; height: 65vh; top: 79.5vh; left: 72vw; transform: translate(-30%, -50%); position: absolute; background: #F1F1F1
 }
 .areaFrame{
-    width: 50vw; height:50vh; top: 25vh; left: 25.5vw; transform: translate(-50%, -50%); position: absolute;
+    width: 50vw; height:50vh; top: 25vh; left: 24vw; transform: translate(-50%, -50%); position: absolute;
 }
 .sortDiv{
     width: 40%; height: 100%; top: 50%; left: 82%; transform: translate(-50%, -50%); position: absolute;
 }
 .saveDiv{
-    width: 66px; height: 32px; left: 61.5%; top: 5%; position: absolute; background: white; border-radius: 100px; border: 1px black solid;
+    width: 66px; height: 32px; left: 40vw; top: 1vh; position: absolute; background: white; border-radius: 100px; border: 1px black solid;
 }
 .save-text{
     left: 40%; top: 20%; position: absolute; color: black; font-size: 15px; font-family: Inter; font-weight: 400; word-wrap: break-word;
@@ -606,17 +607,18 @@ hr {
     width: 16px; height: 16px; left: 10%; top: 20%; position: absolute;
 }
 .Badge{
-    width: 22px; height: 21px; top: 76%; left: 50%; position: absolute;
+    width: 22px; height: 21px; top: 10vh; left: 30vw; position: absolute;
 }
 .rec-text{
-    top: 85%; left: 60%; transform: translate(-50%, -50%); color: black; font-size: 15px; font-family: Inter; font-weight: 500; word-wrap: break-word; position: absolute;
+    top: 10vh; left: 31.5vw; color: black; font-size: 15px; font-family: Inter; font-weight: 500; word-wrap: break-word; position: absolute;
 }
 .result-text{
-    width: 79px; height: 41px; left: 15%; top: 1%; position: absolute; color: black; font-size: 36px; font-family: Inter; font-weight: 400; word-wrap: break-word;
+    width: 79px; height: 41px; left: 10vw; top: 1vh; position: absolute; color: black; font-size: 36px; font-family: Inter; font-weight: 400; word-wrap: break-word;
 }
 .contentDiv{
     margin: 0; width: 70vw; height: 55vh; position: absolute; top: 40%; left: 0px;
 }
 .result-sort-bar{
+    width: 45vw; height: 7vh; top: 13%; left: 11vw; position: absolute;
     width: 45vw; height: 7vh; top: 13%; left: 15%; position: absolute;
 }
