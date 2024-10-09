@@ -485,7 +485,7 @@ hr {
     position: absolute; color: #666666; font-size: 25px; font-family: Inter; font-weight: 400; word-wrap: break-word;
 }
 .Area{
-    width: 62px; height: 26px; position: absolute; color: black; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word;
+    width: 62px; height: 26px; position: absolute; color: black; font-size: 1.4em; font-family: Inter; font-weight: 400; word-wrap: break-word;
 }
 
 .col1{left: 36px;}
@@ -513,7 +513,7 @@ hr {
     width: 1189px; height: 0px; left: 380px; position: absolute; border: 0.50px #7D7D7D solid;
 }
 .divideLines{
-    width: 892px; height: 0px; left: 15%; position: absolute; border: 0.50px #7D7D7D solid;
+    width: 45vw; height: 0px; left: 15%; position: absolute; border: 0.50px #7D7D7D solid;
 }
 .title{
     left: 378px; top: 402px; position: absolute; color: black; font-size: 50px; font-family: Inter; font-weight: 400; word-wrap: break-word;
@@ -618,5 +618,5 @@ hr {
     margin: 0; width: 70vw; height: 55vh; position: absolute; top: 40%; left: 0px;
 }
 .result-sort-bar{
-    width: 900px; height: 75px; top: 13%; left: 15%; position: absolute;
+    width: 45vw; height: 7vh; top: 13%; left: 15%; position: absolute;
 }
