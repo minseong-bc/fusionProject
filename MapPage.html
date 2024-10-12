@@ -6,53 +6,57 @@
     <title>여행지도</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
     <script src="https://kit.fontawesome.com/366187f9eb.js"  crossorigin="anonymous"></script>
-
 </head>
 <body>
   <div class="Entire">  
     <!-- 페이지 공통 부분 -->
-    <div class="nav">
+    <div class="nav"> <!-- height : 15%; -->
       <div class="title-container">
         <span class="maintitle" style="color: #FFFFFF">길벗</span>
         <span class="mainsmalltitle" style="color: black;">길을 함께 가는 동무, 같은 길을 가는 사람</span>
       </div>
+
       <form class="search-box" action="" method="get">
         <input class="search-txt" type="text" name="" placeholder="검색어를 입력하세요.">
         <button class="search-btn" type="submit">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
+
       <div class="nav-icons">
+
         <div class="nav-login">
           <i class="fa-solid fa-user fa-2x"></i>
-          <span class="login-text">로그인</span>
         </div>
+        
         <div class="nav-map">
           <i class="fa-solid fa-bus fa-2x"></i>
-          <span class="map-text">교통정보</span>
         </div>
+
         <div class="nav-mytrip">
           <i class="fa-regular fa-calendar-days fa-2x"></i>
+        </div>
+
+        <div class="nav-text">
+          <span class="login-text">로그인</span>
+          <span class="map-text">교통정보</span>
           <span class="mytrip-text">내 일정</span>
         </div>
       </div>
     </div>
-  
-    <div class="main">
-      <div class="menu">
-        <span class="category">지역별 여행지</span>
-        <span class="category">여행지추천</span>
-        <span class="category">여행정보</span>
-        <span class="category">여행기사</span>
-        <span class="category">여행지도</span>
-      </div>
+    
+    <div class="menu"> <!-- height : 10%; -->
+      <span class="category">지역별 여행지</span>
+      <span class="category">여행지추천</span>
+      <span class="category">여행정보</span>
+      <span class="category">여행기사</span>
+      <span class="category">여행지도</span>
+      <hr>
     </div>
-    <hr>
     <!-- 페이지 공통 부분 -->
 
-    <div class="leftContent" >
+    <div class="leftContent">
       <div class="imgContainer">
         <img id="backImg" src="./images/background.png" />
       </div>
@@ -66,39 +70,39 @@
 
       <div class="mapContent">
         <div class="mapGroup">
-          <img class="Image1" src="./images/munhwawon.png" />
+          <img class="Image" src="./images/munhwawon.png" />
           <div class="storeName">부천문화원</div>
           <div class="Km" >내 위치로부터 1.9km</div>
-          <div class="saveContainer" >
+          <div class="saveContainer">
             <img class="save" src="./images/zzim.png" />          
           </div>
           <div class="ment" >가볼만한 곳</div>
         </div>
 
-        <div class="mapGroup" style="top: 150px">
-          <img class="Image1" src="./images/bupeong.png" />
+        <div class="mapGroup" style="top: 15.2vh">
+          <img class="Image" src="./images/bupeong.png" />
           <div class="storeName">부평문화의거리</div>
-          <div class="Km" >내 위치로부터 5.6km</div>
+          <div class="Km">내 위치로부터 5.6km</div>
           <div class="saveContainer">
             <img class="save" src="./images/zzim.png" />            
           </div>
           <div class="ment">놀거리 많은 곳</div>
         </div>
 
-        <div class="mapGroup" style="top: 300px">
-          <img class="Image2" src="./images/songwoldong.png" />
+        <div class="mapGroup" style="top: 30.4vh">
+          <img class="Image" src="./images/songwoldong.png" />
           <div class="storeName">송월동 동화마을</div>
-          <div class="Km" >내 위치로부터 1.2 km</div>
+          <div class="Km">내 위치로부터 1.2 km</div>
           <div class="saveContainer">
               <img class="save" src="./images/zzim.png" />
           </div>
           <div class="ment">가볼만한 곳</div>
         </div>
         
-        <div class="mapGroup" style="top: 450px">
-          <img class="Image2" src="./images/namine.png" />
+        <div class="mapGroup" style="top: 45.6vh">
+          <img class="Image" src="./images/namine.png" />
           <div class="storeName">나미네 파스타</div>
-          <div class="Km" >내 위치로부터 5.2 km</div>
+          <div class="Km">내 위치로부터 5.2 km</div>
           <div class="saveContainer">
             <img class="save" src="./images/zzim.png" />
           </div>

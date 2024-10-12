@@ -137,7 +137,7 @@ html,body{ margin: 0; padding: 0; width: 100vw; height: 100vh;}
     align-items: center;
     font-size:10px;
     font-weight:bold;
-    top: 23%; left: 50%; transform: translate(-50%, -50%); position: absolute;
+    top: 23vh; left: 50vw; transform: translate(-50%, -50%); position: absolute;
 }
 hr {
     background :#3F78EB;
@@ -179,7 +179,7 @@ hr {
     font-size: 20px;
     overflow: hidden;
     white-space: nowrap;
-    top: 50%;
+    top: 1vh;
     margin-left: 5%;    
 }
 
@@ -398,7 +398,7 @@ hr {
     height: 20px; top: 25px; position: absolute;
 }
 .leftContent{
-    width: 22%; height: 79%; left: 0px; top: 211px; position: absolute; background: #F1F1F1
+    width: 22vw; height: 75vh; left: 0px; top: 23.7vh; position: absolute; background: #F1F1F1
 }
 .imgContainer{
     width: 100%; height: 20%; left: 0px; top: 0px; position: absolute;
@@ -407,7 +407,7 @@ hr {
     width: 100%; height: 100%; left: 0px; top: 0px; position: absolute;
 }
 .sideBar{
-    width: 100%; height: 5%; left: 0px; top: 160px; position: relative; border-bottom: 1px solid black; background: white;
+    width: 100%; height: 5%; left: 0px; top: 15.2vh; position: relative; border-bottom: 1px solid black; background: white;
 }
 .mapFilter{
     width: 91px; height: 13px;  
@@ -426,39 +426,36 @@ hr {
     width: 10px; height: 0px; left: 44px; top: 13px; position: absolute; transform: rotate(-90deg); transform-origin: 0 0; border: 1px #666666 solid;
 }
 .mapContent{
-    width: 100%; height: 75%; left: 0px; top: 202px; position: absolute
+    width: 100%; height: 75%; left: 0px; top: 19vh; position: absolute
 }
 .mapGroup{
-    width: 100%; height: 25%; left: 0px; top: 0px; position: absolute; background: white; border-bottom: 1px gray solid;
+    width: 100%; height: 15vh; left: 0px; top: 0px; position: absolute; background: white; border-bottom: 1px gray solid;
 }
-.Image1{
-    width: 78.81px; height: 90px; left: 23px; top: 30px; position: absolute;
-}
-.Image2{
-    width: 78.81px; height: 90px; left: 29.93px; top: 30px; position: absolute;
+.Image{
+    width: 4vw; height: 9vh; left: 30px; top: 30px; position: absolute;
 }
 .storeName{
-    width: 255px; left: 131px; top: 30px; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; line-height: 35px; word-wrap: break-word;
+    width: 14vw; left: 13vh; top: 3vh; position: absolute; color: black; font-size: 16px; font-family: Karantina; font-weight: 400; line-height: 35px; word-wrap: break-word;
 }
 .Km{
-    width: 198px; height: 15px; left: 131px; top: 65px; position: absolute; color: black; font-size: 10px; font-family: Karantina; font-weight: 400; line-height: 15px; word-wrap: break-word;
+    width: 15vw; height: 2vh; left: 6.5vw; top: 6.5vh; position: absolute; color: black; font-size: 0.7em; font-family: Karantina; font-weight: 400; line-height: 15px; word-wrap: break-word;
 }
 .saveContainer{
-    width: 24.94px; height: 25px; left: 130.69px; top: 95px; position: absolute;
+    width: 1.3vw; height: 2.3vh; left: 6.7vw; top: 9.5vh; position: absolute;
 }
 .save{
     width: 100%; height: 100%; position: absolute;
 }
 .ment{
-    width: 90px; height: 15px; 
-    top: 50%;
-    left: 90%;
-    transform: translate(-50%, -90%); position: absolute; color: #767676; font-size: 12px; font-family: Karantina; font-weight: 400; line-height: 15px; word-wrap: break-word; text-align: left;
+    width: 5vw; height: 1.5vh; 
+    top: 7vh;
+    left: 16vw; float: right;
+    position: absolute; color: #767676; font-size: 12px; font-family: Karantina; font-weight: 400; line-height: 15px; word-wrap: break-word; text-align: left;
 }
 #mapContainer{
-    width: 78%; height: 80%; 
-    top: 61.5%;
-    left: 61.1%;
+    width: 78vw; height: 79vh; 
+    top: 63.5vh;
+    left: 61.1vw;
     transform: translate(-50%, -50%);
     position: absolute;
 }
@@ -469,8 +466,8 @@ hr {
 
 /* 맛집 페이지 stylesheet */
 .filterBox{
-    width: 892px; height: 197px; 
-    top: 31.4%;
+    width: 40vw; height: 20vh; 
+    top: 34vh;
     left: 50%;
     transform: translate(-50%, -50%); 
     position: absolute; background: #F7F7F7;
@@ -510,20 +507,20 @@ hr {
     width: 135px; height: 26px; left: 55%; top: 88%; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word;
 }
 .divLine{
-    width: 1189px; height: 0px; left: 380px; position: absolute; border: 0.50px #7D7D7D solid;
+    width: 1189px; height: 0px; left: 15vw; position: absolute; border: 0.50px #7D7D7D solid;
 }
 .divideLines{
     width: 45vw; height: 0px; left: 15%; position: absolute; border: 0.50px #7D7D7D solid;
     width: 45vw; height: 0px; left: 15%; position: absolute; border: 0.50px #7D7D7D solid;
 }
 .title{
-    left: 378px; top: 402px; position: absolute; color: black; font-size: 50px; font-family: Inter; font-weight: 400; word-wrap: break-word;
+    left: 15vw; top: 42vh; position: absolute; color: black; font-size: 3em; font-family: Inter; font-weight: 400; word-wrap: break-word;
 }
 .title45{
-    left: 377px; top: 416px; position: absolute; color: black; font-size: 45px; font-family: Inter; font-weight: 400; word-wrap: break-word;
+    left: 15vw; top: 416px; position: absolute; color: black; font-size: 2.8em; font-family: Inter; font-weight: 400; word-wrap: break-word;
 }
 .searchResult{
-    left: 378px; top: 509px; position: absolute;
+    left: 15vw; top: 509px; position: absolute;
 }
 .searchTotal{
     top: 50%; left: 7%; transform: translate(-50%, -50%); position: absolute;
@@ -532,42 +529,41 @@ hr {
     font-size: 25px; font-family: Inter; font-weight: 400; word-wrap: break-word;
 }
 .filterOpt{
-    width: 75px; height: 33px; top: 50vh; position: absolute; font-size: 25px; font-family: Inter; font-weight: 400; word-wrap: break-word; transform: translate(-50%, -50%);
+    width: 30%; height: 33px; left: 50%; top: 50%; position: absolute; font-size: 25px; font-family: Inter; font-weight: 400; word-wrap: break-word; transform: translate(-50%, -50%); text-align: center;
 }
-
 .divideLine{
-    width: 20px; height: 0px; top: 539.48px; position: absolute; transform: rotate(-90deg); transform-origin: 0 0; border: 1px #666666 solid
+    width: 20px; height: 0px; top: 4vh; position: absolute; transform: rotate(-90deg); transform-origin: 0 0; border: 1px #666666 solid
 }
 .DivideLine{
     width: 28vw; height: 0px; left: 3vw; top: 35vh; position: absolute; border: 1px black solid
 }
 .underLine{
-    width: 74.01px; height: 0px; left: 2%; top: 95%; position: absolute; border: 1.5px black solid;
+    width: 50%; height: 0px; left: 25%; top: 95%; position: absolute; border: 1.5px black solid;
 }
 /* 맛집 페이지 */
 .RestName { 
-    left: 140px; top: 4px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word; text-align: left; 
+    left: 7vw; top: 0.5vh; position: absolute; text-align: center; color: black; font-size: 1.25em; font-family: Inter; font-weight: 400; word-wrap: break-word; text-align: left; 
 }
 .distanceContainer{
-    width: 160px; height: 17px; left: 134px; top: 36px; position: absolute; text-align: center;
+    width: 8vw; height: 1.5vh; left: 6.5vw; top: 3.5vh; position: absolute; text-align: center;
 }
 .RecContainer{
     width: 160px; height: 17px; left: 134px; top: 36px; position: absolute; text-align: center;
 }
 .wichi{
-    color: #767676; font-size: 14px; font-family: Inter; font-weight: 400; word-wrap: break-word;
+    color: #767676; font-size: 0.875em; font-family: Inter; font-weight: 400; word-wrap: break-word;
 }
 .distanceNum{
-    color: black; font-size: 14px; font-family: Inter; font-weight: 400; word-wrap: break-word;
+    color: black; font-size: 0.875em; font-family: Inter; font-weight: 400; word-wrap: break-word;
 }
 .contentContainer{
-    width: 714px; height: 99px; padding-right: 584px; left: 0px; top: 0px; position: absolute; justify-content: flex-start; align-items: center; display: inline-flex;
+    width: 100%; height: 100%; left: 0px; top: 0px; position: absolute; justify-content: flex-start; align-items: center; display: inline-flex;
 }
 .contentFrame{
-    width: 714px; height: 99px; top: 70%; left: 15%; position: absolute;
+    width: 50vw; height: 10vh; top: 70%; left: 15%; position: absolute;
 }
 .imageContainer{
-    width: 130px; height: 100px;
+    width: 6.5vw; height: 10vh;
 }
 .image{
     width: 100%; height: 100%;
@@ -636,4 +632,8 @@ hr {
 }
 .article-text{
     width: 30vw; height: 20vh; left: 12vw; top: 10vh; position: absolute; color: black; font-size: 15px; font-family: Karantina; font-weight: 400; line-height: 35px; word-wrap: break-word
+}
+.sort-div{
+    width: 25vw; height: 5vh; left: 60vw; top: 50.5vh;
+    position: relative;
 }

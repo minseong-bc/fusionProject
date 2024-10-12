@@ -11,45 +11,51 @@
 </head>
 <body>
   <div class="Entire">
-  <!-- 페이지 공통 부분 -->
-  <div class="nav">
-    <div class="title-container">
-      <span class="maintitle" style="color: #FFFFFF">길벗</span>
-      <span class="mainsmalltitle" style="color: black;">길을 함께 가는 동무, 같은 길을 가는 사람</span>
-    </div>
-    <form class="search-box" action="" method="get">
-      <input class="search-txt" type="text" name="" placeholder="검색어를 입력하세요.">
-      <button class="search-btn" type="submit">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
-    </form>
-    <div class="nav-icons">
-      <div class="nav-login">
-        <i class="fa-solid fa-user fa-2x"></i>
-        <span class="login-text">로그인</span>
+    <!-- 페이지 공통 부분 -->
+    <div class="nav"> <!-- height : 15%; -->
+      <div class="title-container">
+        <span class="maintitle" style="color: #FFFFFF">길벗</span>
+        <span class="mainsmalltitle" style="color: black;">길을 함께 가는 동무, 같은 길을 가는 사람</span>
       </div>
-      <div class="nav-map">
-        <i class="fa-solid fa-bus fa-2x"></i>
-        <span class="map-text">교통정보</span>
-      </div>
-      <div class="nav-mytrip">
-        <i class="fa-regular fa-calendar-days fa-2x"></i>
-        <span class="mytrip-text">내 일정</span>
-      </div>
-    </div>
-  </div>
 
-  <div class="main">
-    <div class="menu">
+      <form class="search-box" action="" method="get">
+        <input class="search-txt" type="text" name="" placeholder="검색어를 입력하세요.">
+        <button class="search-btn" type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+
+      <div class="nav-icons">
+
+        <div class="nav-login">
+          <i class="fa-solid fa-user fa-2x"></i>
+        </div>
+        
+        <div class="nav-map">
+          <i class="fa-solid fa-bus fa-2x"></i>
+        </div>
+
+        <div class="nav-mytrip">
+          <i class="fa-regular fa-calendar-days fa-2x"></i>
+        </div>
+
+        <div class="nav-text">
+          <span class="login-text">로그인</span>
+          <span class="map-text">교통정보</span>
+          <span class="mytrip-text">내 일정</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="menu"> <!-- height : 10%; -->
       <span class="category">지역별 여행지</span>
       <span class="category">여행지추천</span>
       <span class="category">여행정보</span>
       <span class="category">여행기사</span>
       <span class="category">여행지도</span>
+      <hr>
     </div>
-  </div>
-  <hr>
-  <!-- 페이지 공통 부분 -->
+    <!-- 페이지 공통 부분 -->
       
     <div class="filterBox" >
       <div class="selected"></div>
@@ -79,36 +85,38 @@
       <div class="area col7 row2" >#경북</div>
     </div>
     
-    <div class="divLine" style="top: 489.44px;"></div>
-    <div class="divLine" style="top: 568.11px;"></div>
-    <div class="divLine" style="top: 716.37px;"></div>
-    <div class="divLine" style="top: 864.64px;"></div>
-    <div class="divLine" style="top: 1019px;"></div>
-    <div class="divLine" style="top: 1181px;"></div>
-    <div class="divLine" style="top: 1346px;"></div>
+    <div class="divLine" style="top: 50vh;"></div>
+    <div class="divLine" style="top: 57vh;"></div>
+    <div class="divLine" style="top: 72vh;"></div>
+    <div class="divLine" style="top: 87vh;"></div>
+    <div class="divLine" style="top: 102vh;"></div>
+    <div class="divLine" style="top: 117vh;"></div>
+    <div class="divLine" style="top: 132vh;"></div>
 
-    <div class="title" >#전체</div>
+    <div class="title">#전체</div>
     <div class="searchResult">
       <span class="result" style="color: black; ">총 </span>
       <span class="result" style="color: #0C98CD; ">1,132</span>
       <span class="result" style="color: black; ">건</span>
     </div>
     
-    <div class="filterOpt" style="left: 1301px; color: black;" >최신순</div>
-    <div class="filterOpt" style="left: 1400px; color: #666666;" >거리순</div>
-    <div class="filterOpt" style="left: 1499px; color: #666666; ">인기순</div>
-    <div class="divideLine" style="left: 1385px;"></div>
-    <div class="divideLine" style="left: 1485px;"></div>
-    <div class="underLine"></div>
-    
-    
-    
-    <div class="contentFrame" style="top: 590px;">
+    <div class="sort-div">
+      <div class="filterOpt" style="left: 2vw; color: black;" >
+        최신순
+        <div class="underLine"></div>
+      </div>
+      <div class="filterOpt" style="left: 6.5vw; color: #666666;" >거리순</div>
+      <div class="filterOpt" style="left: 11vw; color: #666666; ">인기순</div>
+      <div class="divideLine" style="left: 4.3vw"></div>
+      <div class="divideLine" style="left: 8.8vw"></div>
+    </div>
+        
+    <div class="contentFrame" style="top: 59.5vh;">
       <div class="contentContainer">
         <div class="imageContainer">
           <img class="image" src="./images/prime.png" />
         </div>
-        <div class="RestName" >로리스 더 프라임 립</div>
+        <div class="RestName">로리스 더 프라임 립</div>
         <div class="distanceContainer">
           <span class="wichi">내 위치로 부터</span>
           <span class="distanceNum"> 0.5km</span>
@@ -116,7 +124,7 @@
       </div>
     </div>
 
-    <div class="contentFrame" style="top: 738px;">
+    <div class="contentFrame" style="top: 74.5vh;">
       <div class="contentContainer">
         <div class="imageContainer">
           <img class="image" src="./images/taco.png" />
@@ -129,7 +137,7 @@
       </div>
     </div>
 
-    <div class="contentFrame" style="top: 894px;">
+    <div class="contentFrame" style="top: 89.5vh;">
       <div class="contentContainer">
         <div class="imageContainer">
           <img class="image" src="./images/norang.png" />
@@ -142,7 +150,7 @@
       </div>
     </div>
 
-    <div class="contentFrame" style="top: 1048px;">
+    <div class="contentFrame" style="top: 104.5vh;">
       <div class="contentContainer">
         <div class="imageContainer">
           <img class="image" src="./images/dream.png" />
@@ -155,7 +163,7 @@
       </div>
     </div>
 
-    <div class="contentFrame" style="top: 1218px;">
+    <div class="contentFrame" style="top: 119.5vh">
       <div class="contentContainer">
         <div class="imageContainer"><img class="image" src="./images/damche.png" /></div>
         <div class="RestName">해담채</div>
