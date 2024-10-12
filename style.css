@@ -467,7 +467,7 @@ hr {
 /* 맛집 페이지 stylesheet */
 .filterBox{
     width: 40vw; height: 20vh; 
-    top: 34vh;
+    top: 34%;
     left: 50%;
     transform: translate(-50%, -50%); 
     position: absolute; background: #F7F7F7;
@@ -520,7 +520,7 @@ hr {
     left: 15vw; top: 416px; position: absolute; color: black; font-size: 2.8em; font-family: Inter; font-weight: 400; word-wrap: break-word;
 }
 .searchResult{
-    left: 15vw; top: 509px; position: absolute;
+    left: 15vw; top: 51.5vh; position: absolute;
 }
 .searchTotal{
     top: 50%; left: 7%; transform: translate(-50%, -50%); position: absolute;
