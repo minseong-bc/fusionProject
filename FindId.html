@@ -16,6 +16,8 @@
             margin: 4px;
         }
         body {
+            margin: 0;
+            padding: 0;
             width:100vw;
             height:100vh;
             display:flex;
@@ -27,7 +29,7 @@
            width:540px;
            height: 900px;
            border: 1px solid #AACDFF;
-           box-shadow: 7px 7px 39px rgba(0, 104, 255, 0.25);
+           box-shadow: 10px 10px 5px 1px rgba(0, 104, 255, 0.25);
            border-radius: 20px;
            display: flex;
            flex-direction: column;
@@ -139,9 +141,27 @@
             list-style: none;
             display: flex;
             width: 300px;
-            justify-content: space-between;
+            justify-content: center;  /* 중앙 정렬 */
+            align-items: center;      /* 수직 정렬 */
             padding-left: 0px;
-            margin-bottom: 40px;
+            margin: 0 0 40px 0;       /* 일관된 여백 */
+        }
+        
+        .findInfo_ul li {
+        margin: 0 10px;  /* 항목 간 간격 일정하게 유지 */
+        }
+
+        .active {
+            color: black;
+            font-weight: bold;
+        }
+        .findInfo_ul a:hover {
+            color: #0044CC;
+            transform: scale(1.1); /* 마우스 올릴 때 확대 */
+        }
+
+        .inactive {
+            color: rgba(0, 0, 0, 0.4); /* 회색(투명) */
         }
         #findId, #findPwd{
             cursor: pointer;
@@ -152,18 +172,21 @@
         #token_button, #token_timer_confirm_button, #signup_button {
             cursor: pointer; /* 포인터로 변경 */
         }
+        #tomain {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <ul class="findInfo_ul">
-            <li><a id="findId">아이디 찾기</a></li>
+            <li><a id="findId" class="active" onclick="location.href='FindId.html'">아이디 찾기</a></li>
             <li>|</li>
-            <li><a id="findPwd" onclick="location.href='Findpw.html'">비밀번호 찾기</a></li>
+            <li><a id="findPwd" class="inactive" onclick="location.href='Findpw.html'">비밀번호 찾기</a></li>
         </ul>
         <!-- 로고 -->
-        <div class="logo">길벗</div>
-        <div class="logo-subtext">길을 함께 가는 동무, 같은 길을 가는 사람</div>
+        <div class="logo" id = "tomain" onclick="location.href='main.html'">길벗</div>
+        <div class="logo-subtext" id = "tomain" onclick="location.href='main.html'">길을 함께 가는 동무, 같은 길을 가는 사람</div>
         <div class="a" id="a">이름</div>
         <input class="inputbox" id="name" type="text" placeholder="이름을 입력해 주세요."/>
         <div class="error" id="error_name"></div>
