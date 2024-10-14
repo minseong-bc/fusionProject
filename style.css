@@ -514,10 +514,10 @@ hr {
     width: 45vw; height: 0px; left: 15%; position: absolute; border: 0.50px #7D7D7D solid;
 }
 .title{
-    left: 15vw; top: 42vh; position: absolute; color: black; font-size: 3em; font-family: Inter; font-weight: 400; word-wrap: break-word;
+    left: 15vw; top: 42vh; position: absolute; color: black; font-size: 2.8em; font-family: Inter; font-weight: 400; word-wrap: break-word;
 }
 .title45{
-    left: 15vw; top: 416px; position: absolute; color: black; font-size: 2.8em; font-family: Inter; font-weight: 400; word-wrap: break-word;
+    left: 15vw; top: 416px; position: absolute; color: black; font-size: 2.5em; font-family: Inter; font-weight: 400; word-wrap: break-word;
 }
 .searchResult{
     left: 15vw; top: 51.5vh; position: absolute;
