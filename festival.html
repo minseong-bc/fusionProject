@@ -125,7 +125,7 @@
       <div class="festival-title">제20회 이천 쌀 문화축제</div>
       <div class="festival-charge">요금</div>
     </div>
-    <div class="filterbox">
+    <div class="festival-filterbox">
       <div style="width: 570px; height: 160px; left: 0px; top: 0px; position: absolute; background: #3D79EE"></div>
       <div style="width: 265px; height: 45.71px; left: 255px; top: 14.86px; position: absolute">
         <div style="width: 80px; height: 45.71px; left: 0px; top: 0px; position: absolute; background: white; border: 1px black solid"></div>
@@ -134,20 +134,27 @@
         <div style="width: 18px; height: 22.86px; left: 247px; top: 11.43px; position: absolute; background: rgba(255, 255, 255, 0.85)"></div>
         <div style="width: 8px; height: 17.14px; left: 118px; top: 12.57px; position: absolute; color: black; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">~</div>
       </div>
+      <form class="festival-search-box" action="" method="get">
+        <input class="search-txt" type="text" name="" placeholder="검색어를 입력하세요.">
+        <button class="festival-search-btnbox" type="submit">
+          검색
+        </button>
+    </form>
       <div style="width: 80px; height: 28.57px; left: 452px; top: 97.14px; position: absolute">
+       
         <div style="width: 80px; height: 28.57px; left: 0px; top: 0px; position: absolute; background: white; border: 1px black solid"></div>
-        <div style="width: 23px; height: 14.29px; left: 29px; top: 5.71px; position: absolute; color: black; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">검색</div>
+        <div class="festival-filterbox-searchbox"></div>
       </div>
-      <div style="width: 380px; height: 45.71px; left: 32px; top: 88px; position: absolute; background: white; border: 1px black solid"></div>
-      <div style="width: 80px; height: 45.71px; left: 32px; top: 14.86px; position: absolute">
-        <div style="width: 80px; height: 45.71px; left: 0px; top: 0px; position: absolute; background: white; border: 1px black solid"></div>
-        <div style="width: 12px; height: 13.23px; left: 62px; top: 16px; position: absolute; background: black"></div>
-        <div style="width: 27px; height: 17.14px; left: 8px; top: 14.86px; position: absolute; color: black; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">지역</div>
+      
+      <div class="festival-filterbox-regionbox">
+        <div class="festival-filterbox-regionboxstyle"></div>
+        <div class="festival-filterbox-chevrondown1"><i class="fa-solid fa-chevron-down"></i></div>
+        <div class="festival-filterbox-region">지역</div>
       </div>
-      <div style="width: 80px; height: 45.71px; left: 139px; top: 14.86px; position: absolute">
-        <div style="width: 80px; height: 45.71px; left: 0px; top: 0px; position: absolute; background: white; border: 1px black solid"></div>
-        <div style="width: 12px; height: 13.23px; left: 62px; top: 16px; position: absolute; background: black"></div>
-        <div style="width: 48px; height: 17.14px; left: 8px; top: 14.86px; position: absolute; color: black; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">축제 이름</div>
+      <div class="festival-filterbox-festivalnamebox">
+        <div class="festival-filterbox-festivalnameboxstyle"></div>
+        <div class="festival-filterbox-chevrondown1"><i class="fa-solid fa-chevron-down"></i></div>
+        <div class="festival-filterbox-festivalname">축제 이름</div>
       </div>
     </div>
     
