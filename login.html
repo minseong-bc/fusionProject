@@ -154,14 +154,38 @@ body {
     background-blend-mode: multiply, normal;
     filter: drop-shadow(-20px 0px 20px rgba(0, 0, 0, 0.25));
 }
+        .findInfo_ul{
+            list-style: none;
+            display: flex;
+            width: 400px;
+            justify-content: space-between;
+            padding-left: 50px;
+            margin-top: 30px;
+            opacity: 0.6;
+        }
+        .findInfo_ul a:hover {
+            color: #0044CC;
+            transform: scale(1.1); /* 마우스 올릴 때 확대 */
+        }
+
+        #findId, #findPwd{
+            cursor: pointer;
+        }
+        #token_button, #token_timer_confirm_button, #signup_button {
+            cursor: pointer; /* 포인터로 변경 */
+        }
+        #tomain {
+            cursor: pointer;
+        }
+
     </style>
 </head>
 <body>
     <div class="login-page">
         <div class="background"></div>
         <div class="logo">
-            <span class="gilbeot">길벗</span>
-            <span class="slogan">길을 함께 가는 동무, 같은 길을 가는 사람</span>
+            <span class="gilbeot" id = "tomain" onclick="location.href='main.html'">길벗</span>
+            <span class="slogan" id = "tomain" onclick="location.href='main.html'">길을 함께 가는 동무, 같은 길을 가는 사람</span>
         </div>
 
         <div class="login-form">
@@ -173,16 +197,49 @@ body {
                 <input type="password" placeholder="비밀번호" class="password-input">
                 <button class="login-btn">로그인</button>
             </div>
-            <div class="form-footer">
-                <span class="find-password">비밀번호 찾기</span>
-                <span class="divider"></span>
-                <span class="find-id">아이디 찾기</span>
-                <span class="divider"></span>
-                <span class="sign-up">회원가입</span>
-            </div>
+            <ul class="findInfo_ul">
+                <li><a id="findPwd" onclick="location.href='FindId.html'">아이디 찾기</a></li>
+                <li>|</li>
+                <li><a id="findPwd" onclick="location.href='Findpw.html'">비밀번호 찾기</a></li>
+                <li>|</li>
+                <li><a id="findPwd" onclick="location.href='register.html'">회원가입</a></li>
+            </ul>
         </div>
+
+        
+        <div class="footer">
+            <button id="findPwd_button" onclick="signup()" disabled>비밀번호 재설정</button>
+        </div>
+
 
         <div class="right-image"></div>
     </div>
+    <script>
+        document.getElementById('login-button').addEventListener('click', () => {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // 로그인 요청
+            fetch('http://localhost:3000/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // 로그인 성공 시 메인 페이지로 이동
+                    location.href = 'main.html';
+                } else {
+                    alert('로그인에 실패했습니다: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
 </body>
 </html>
