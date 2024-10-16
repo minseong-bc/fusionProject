@@ -59,6 +59,7 @@ a {text-decoration: none; color: inherit; }
     line-height: 30px;
     width: 100%;
     padding-left: 2%;
+    vertical-align: center;
 }
 .search-btn{
     color: #3C78ED;
@@ -310,14 +311,14 @@ hr {
 }
 .festival-filterbox-regionbox{
     width: 80px; 
-    height: 45.71px; 
+    height: 40px; 
     left: 32px; 
     top: 14.86px; 
     position: absolute;
 }
 .festival-filterbox-regionboxstyle{
     width: 80px; 
-    height: 45.71px; 
+    height: 40px; 
     left: 0px; 
     top: 0px; 
     position: absolute; 
@@ -327,7 +328,7 @@ hr {
 .festival-filterbox-region{
     width: 27px;  
     left: 8px; 
-    top: 14.86px; 
+    top: 12px; 
     position: absolute; 
     font-size: 13px; 
     font-family: Karantina; 
@@ -338,19 +339,20 @@ hr {
     width: 10px; 
     height: 10px; 
     left: 61px; 
-    top: 12px; 
+    top: 10px; 
     position: absolute;
+    cursor: pointer;
 }
 .festival-filterbox-festivalnamebox{
     width: 80px; 
-    height: 45.71px; 
+    height: 40px; 
     left: 139px; 
     top: 14.86px; 
     position: absolute;
 }
 .festival-filterbox-festivalnameboxstyle{
     width: 80px; 
-    height: 45.71px; 
+    height: 40px; 
     left: 0px; 
     top: 0px; 
     position: absolute; 
@@ -361,7 +363,7 @@ hr {
     width: 48px; 
     height: 17.14px; 
     left: 8px; 
-    top: 14.86px; 
+    top: 12px; 
     position: absolute; 
     font-size: 11px; 
     font-family: Karantina; 
@@ -369,21 +371,40 @@ hr {
     word-wrap: break-word;
 }
 .festival-search-box{
-    width: 380px; 
-    height: 45.71px; 
-    left: 32px; 
-    top: 88px; 
-    position: absolute; 
-    background: white; 
-    border: 1px black solid;
+  width: 380px; 
+  height: 45.71px; 
+  left: 32px; 
+  top: 88px; 
+  position: absolute; 
+  background: white; 
+  border: 1px black solid;
+}
+.festival-search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0px;
+    color: #797979;
+    font-size: 16px;
+    line-height: 30px;
+    width: 100%;
+    padding-left: 2%;
+    padding-top: 2%;
+    vertical-align: center;
+}
+.festival-search-btnwrapper{
+  width: 80px; 
+  height: 28.57px; 
+  left: 430px; 
+  top: 7px; 
+  position: absolute;
 }
 .festival-search-btnbox{
-    width: 23px; 
-    height: 14.29px; 
-    left: 29px; 
-    top: 5.71px; 
+    width: 80px; 
+    height: 28.57px; 
     position: absolute; 
-    color: black; 
+    border: 1px;
+    background-color: #FFFFFF;
     font-size: 12px; 
     font-family: Karantina; 
     font-weight: 400; 
