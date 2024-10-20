@@ -10,45 +10,79 @@
 </head>
 <body>
     <!-- 페이지 공통 부분 -->
-    <div class="nav">
-        <div class="title-container">
-          <span class="maintitle" style="color: #FFFFFF">길벗</span>
-          <span class="mainsmalltitle" style="color: black;">길을 함께 가는 동무, 같은 길을 가는 사람</span>
-        </div>
-        <form class="search-box" action="" method="get">
-          <input class="search-txt" type="text" name="" placeholder="검색어를 입력하세요.">
-          <button class="search-btn" type="submit">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </form>
-        <div class="nav-icons">
-          <div class="nav-login">
-            <i class="fa-solid fa-user fa-2x"></i>
-            <span class="login-text">로그인</span>
+    <div class="Entire">
+        <!-- 페이지 공통 부분 -->
+        <div class="nav"> <!-- height : 15%; -->
+          <div class="title-container">
+            <span class="maintitle" style="color: #FFFFFF"><a href="main.html">길벗</a></span>
+            <span class="mainsmalltitle" style="color: black;"><a href="main.html">길을 함께 가는 동무, 같은 길을 가는 사람</a></span>
           </div>
-          <div class="nav-map">
-            <i class="fa-solid fa-bus fa-2x"></i>
-            <span class="map-text">교통정보</span>
-          </div>
-          <div class="nav-mytrip">
-            <i class="fa-regular fa-calendar-days fa-2x"></i>
-            <span class="mytrip-text">내 일정</span>
-          </div>
-        </div>
-    </div>
     
-    <div class="main">
-    <div class="menu">
-        <span class="category">지역별 여행지</span>
-        <span class="category">여행지추천</span>
-        <span class="category">여행정보</span>
-        <span class="category">여행기사</span>
-        <span class="category">여행지도</span>
-    </div>
-    </div>
-    <hr>
-    <!-- 페이지 공통 부분 -->
-
+          <form class="search-box" action="" method="get">
+            <input class="search-txt" type="text" name="" placeholder="검색어를 입력하세요.">
+            <button class="search-btn" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+    
+          <div class="nav-icons">
+    
+            <a href="login.html">
+              <div class="nav-login">
+                <i class="fa-solid fa-user fa-2x"></i>
+              </div>
+            </a>
+            
+            <div class="nav-map">
+              <a href="MapPage.html"><i class="fa-solid fa-bus fa-2x"></i></a>
+            </div>
+    
+            <div class="nav-mytrip">
+              <i class="fa-regular fa-calendar-days fa-2x"></i>
+            </div>
+    
+            <div class="nav-text">
+              <a href="login.html"><span class="login-text">로그인</span></a>
+              <a href="MapPage.html"><span class="map-text">교통정보</span></a>
+              <span class="mytrip-text"><a href="">내 일정</a></span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="menu"> <!-- height : 10%; -->
+          <span class="category">
+            <a href="Region.html">
+            <i class="fa-solid fa-map-marker-alt"></i>
+          </a>
+            <a href="Region.html">지역별 여행지</a>
+          </span>
+          <span class="category">
+            <a href="RecPage.html">
+            <i class="fa-solid fa-star"></i>
+          </a>
+            <a href="RecPage.html">여행지추천</a>
+          </span>
+          <span class="category">
+            <a href="">
+            <i class="fa-solid fa-info-circle"></i>
+          </a>
+            <a href="">여행정보</a>
+          </span>
+          <span class="category">
+            <a href="Article.html">
+            <i class="fa-solid fa-newspaper"></i>
+          </a>
+            <a href="Article.html">여행기사</a>
+          </span>
+          <span class="category">
+            <a href="MapPage.html">
+            <i class="fa-solid fa-map"></i>
+          </a>
+            <a href="MapPage.html">여행지도</a>
+          </span>
+          
+        </div>
+        <hr>
     <p class="main-title">MZ가 추천하는 여행지</p>
     
     <br>
@@ -56,58 +90,117 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="slide-content">
-                    <img src="images/image.jpg" width="300px" height="200px" class="slide">
+                    <img src="images/MZ1.jpg" width="300px" height="200px" class="slide">
                     <p class="content-title">남애항 스카이 워크 전망대</p>
-                    <p class="content-info">남애항에 왔다면 스카이워크 한번 쯤은... </p>
+                    <p class="content-info">동해안의 3대 미항 중 하나인
+
+                      양양 남애항은 아름다운 항구로,
+                      
+                      크고 작은 어선들이 왕성한 어로 작업을 하고 있습니다.
+                    
+                      
+                      특히나 어두운 밤바다를 밝혀
+                      
+                      어선들의 길잡이를 해 주고 있는 등대는
+                      
+                      양양의 자연산 송이를 홍보하기 위해
+                      
+                      송이 모양을 하고 있어 더욱 유명합니다.
+                      
+                      
+                      남애항은 이러한 유명세로
+                      
+                      더 많은 여행객이 찾아오는
+                      
+                      명소 중 한곳이 되었습니다. </p>
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="slide-content">
-                    <img src="images/image2.jpg" width="300px" height="200px" class="slide">
-                    <p class="content-title">가평 쁘띠프랑스</p>
-                    <p class="content-info">프랑스 거리의 매력을 느껴보세요.</p>
+                    <img src="images/MZ2.jpg" width="300px" height="200px" class="slide">
+                    <p class="content-title">남해 독일마을</p>
+                    <p class="content-info">남해의 독일마을은 1960~70년대에 파독 광부와 간호사들이 정착한 마을로, 독일식 건축물이 인상적입니다. 예쁜 골목과 카페들이 있어 사진 찍기에도 좋은 장소로 인기입니다.</p>
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="slide-content">
-                    <img src="images/image3.jpg" width="300px" height="200px" class="slide">
-                    <p class="content-title">여수 돌산공원</p>
-                    <p class="content-info">여수의 야경을 감상하세요.</p>
+                    <img src="images/MZ3.jpg" width="300px" height="200px" class="slide">
+                    <p class="content-title">서울 익선동 한옥마을</p>
+                    <p class="content-info">서울의 복잡한 도심 속에서 한옥의 고즈넉함과 현대적 감각이 조화롭게 어우러진 익선동 한옥마을은 개성 있는 카페와 레스토랑으로 유명합니다.</p>
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="slide-content">
-                    <img src="images/image3.jpg" width="300px" height="200px" class="slide">
-                    <p class="content-title">여수 돌산공원</p>
-                    <p class="content-info">여수의 야경을 감상하세요.</p>
+                    <img src="images/MZ4.jpg" width="300px" height="200px" class="slide">
+                    <p class="content-title">강릉 안목 해변</p>
+                    <p class="content-info">강릉 안목 해변은 바다를 보며 커피를 즐길 수 있는 커피 거리로 유명합니다. 일몰 풍경이 특히 아름다워 SNS 사진 명소로 손꼽힙니다.</p>
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="slide-content">
-                    <img src="images/image3.jpg" width="300px" height="200px" class="slide">
-                    <p class="content-title">여수 돌산공원</p>
-                    <p class="content-info">여수의 야경을 감상하세요.</p>
+                    <img src="images/MZ5.jpg" width="300px" height="200px" class="slide">
+                    <p class="content-title">전주 한옥마을</p>
+                    <p class="content-info">전주 한옥마을은 전통 한옥이 모여 있는 곳으로, 한복을 입고 골목길을 걸으며 다양한 전통 음식을 맛볼 수 있습니다.</p>
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="slide-content">
-                    <img src="images/image3.jpg" width="300px" height="200px" class="slide">
-                    <p class="content-title">여수 돌산공원</p>
-                    <p class="content-info">여수의 야경을 감상하세요.</p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="slide-content">
-                    <img src="images/image3.jpg" width="300px" height="200px" class="slide">
-                    <p class="content-title">여수 돌산공원</p>
-                    <p class="content-info">여수의 야경을 감상하세요.</p>
+                    <img src="images/MZ6.jpg" width="300px" height="200px" class="slide">
+                    <p class="content-title">제주 성산 일출봉</p>
+                    <p class="content-info">제주 성산 일출봉은 제주 동쪽에 위치한 일출 명소로, 이른 아침 해가 떠오르는 모습을 볼 수 있는 매력적인 장소입니다.</p>
                 </div>
             </div>
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
     </div>
-    
+    <div class="gray-section">
+      <p class="seasonal-title">계절별 추천 여행지</p>
+      <br>
+      <div class="swiper-container">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                  <div class="slide-content">
+                      <img src="images/ss1.jpg" width="300px" height="200px" class="slide">
+                      <p class="content-title">경주 벚꽃길</p>
+                      <p class="content-info">경주는 봄철 벚꽃이 만개하여 유명한 도시로, 역사적인 유적과 자연이 어우러진 경주의 벚꽃길은 환상적인 풍경을 자아냅니다.</p>
+                  </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-content">
+                    <img src="images/ss2.jpg" width="300px" height="200px" class="slide">
+                    <p class="content-title">부산 해운대 해수욕장</p>
+                    <p class="content-info">여름철 부산 해운대는 해수욕과 다양한 해양 스포츠를 즐길 수 있는 곳으로, MZ 세대에게 인기가 많습니다.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-content">
+                  <img src="images/ss3.jpg" width="300px" height="200px" class="slide">
+                  <p class="content-title">설악산 단풍</p>
+                  <p class="content-info">가을이면 단풍이 절경을 이루는 설악산은 등산객과 여행객 모두에게 사랑받는 가을 여행지입니다.</p>
+              </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-content">
+                <img src="images/ss4.jpg" width="300px" height="200px" class="slide">
+                <p class="content-title">남이섬</p>
+                <p class="content-info">가을의 남이섬은 은행나무와 단풍이 물들어 경치가 아름답고, 배를 타고 섬으로 들어가는 경험이 독특합니다.</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-content">
+              <img src="images/ss5.jpg" width="300px" height="200px" class="slide">
+              <p class="content-title">인제 자작나무 숲</p>
+              <p class="content-info">겨울에 눈 덮인 자작나무 숲은 마치 동화 속 한 장면 같은 분위기를 자아내며, 힐링 여행지로 제격입니다.</p>
+          </div>
+      </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+      </div>
+  </div>
+
+</div>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="script/swiper.js"></script>
 </body>
