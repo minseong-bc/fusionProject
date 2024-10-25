@@ -154,33 +154,12 @@
         <div class="logo-subtext" id = "tomain" onclick="location.href='main.html'">길을 함께 가는 동무, 같은 길을 가는 사람</div>
 
         <form action="main.html" method = "POST">
-
-        <div class="a" id="a">아이디</div>
-        <input class="inputbox" id="id" type="text" placeholder="아이디를 입력해 주세요."/>
-        <div class="error" id="error_id"></div>
-        <div class="a" id="a">이름</div>
-        <input class="inputbox" id="name" type="text" placeholder="이름을 입력해 주세요."/>
-        <div class="error" id="error_name"></div>
-        <div class="a" id="a">비밀번호</div>
-        <input class="inputbox" id="password1" type="password" placeholder="비밀번호를 입력해 주세요."/>
-        <div class="error" id="error_password1"></div>
-        <input class="inputbox" id="password2" type="password" placeholder="비밀번호를 다시 입력해 주세요."/>
-        <div class="error" id="error_password2"></div>
-        <div class="a" id="a">전화번호</div>
-        <div class="phone_wrapper">
-            <input id="phone1" class="phoneNum" name="phone1" type="text" maxlength="13" oninput="autoHyphen2(this)" onchange="changePhone1()" onkeyup="onchange()">
-        </div>
-        <div class="token_wrapper"> 
-            <div class="token" id="token">000000</div>
-            <button type="submit" disabled="true" id="token_button" onclick="btnActive()" >인증번호 전송</button>
-        </div>
-        <div class="token_wrapper">
-            <div class="token_timer" id="token_timer">3:00</div>
-            <button id="token_timer_confirm_button" onclick="getTokenTimerConfirm()" disabled>인증완료</button>
-        </div>
-    <div class="footer">
-        <button type="submit" id="signup_button" onclick="signup()" disabled>가입하기</button>
-    </div>
+            <input class="inputbox" id="id" type="text" placeholder="아이디를 입력해 주세요."/>
+            <input class="inputbox" id="name" type="text" placeholder="이름을 입력해 주세요."/>
+            <input class="inputbox" id="password1" type="password" placeholder="비밀번호를 입력해 주세요."/>
+            <input class="inputbox" id="password2" type="password" placeholder="비밀번호를 다시 입력해 주세요."/>
+            <input id="phone1" class="phoneNum" name="phone1" type="text" maxlength="13" />
+            <button type="submit" id="signup_button" onclick="signup()" >가입하기</button>
         </form>
     </div>
 
