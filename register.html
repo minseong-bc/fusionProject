@@ -153,18 +153,19 @@
         <div class="logo" id = "tomain" onclick="location.href='main.html'" >길벗</div>
         <div class="logo-subtext" id = "tomain" onclick="location.href='main.html'">길을 함께 가는 동무, 같은 길을 가는 사람</div>
 
-        <form action="main.html" method = "POST">
+
+        <form action="login.html" method="POST">
 
         <div class="a" id="a">아이디</div>
-        <input class="inputbox" id="id" type="text" placeholder="아이디를 입력해 주세요."/>
+        <input type="text" class="inputbox" name="id" id="id" placeholder="아이디를 입력해 주세요."/>
         <div class="error" id="error_id"></div>
         <div class="a" id="a">이름</div>
-        <input class="inputbox" id="name" type="text" placeholder="이름을 입력해 주세요."/>
+        <input type="text" class="inputbox" id="name" placeholder="이름을 입력해 주세요."/>
         <div class="error" id="error_name"></div>
         <div class="a" id="a">비밀번호</div>
-        <input class="inputbox" id="password1" type="password" placeholder="비밀번호를 입력해 주세요."/>
+        <input type="password" class="inputbox" name="password" id="password1" placeholder="비밀번호를 입력해 주세요."/>
         <div class="error" id="error_password1"></div>
-        <input class="inputbox" id="password2" type="password" placeholder="비밀번호를 다시 입력해 주세요."/>
+        <input type="password" class="inputbox" id="password2" placeholder="비밀번호를 다시 입력해 주세요."/>
         <div class="error" id="error_password2"></div>
         <div class="a" id="a">전화번호</div>
         <div class="phone_wrapper">
@@ -179,10 +180,11 @@
             <button id="token_timer_confirm_button" onclick="getTokenTimerConfirm()" disabled>인증완료</button>
         </div>
     <div class="footer">
-        <button type="submit" id="signup_button" onclick="signup()" disabled>가입하기</button>
+        <input type="submit" id="signup_button" value = "회원가입" onclick="signup()"></button>
     </div>
         </form>
     </div>
+
 
     <script src="script/function.js"></script>
     <script>

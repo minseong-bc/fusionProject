@@ -177,7 +177,11 @@ body {
         #tomain {
             cursor: pointer;
         }
-
+        .img{
+    position: absolute;
+    top: -20px;
+    left: -40px;
+}
     </style>
 </head>
 <body>
@@ -192,11 +196,14 @@ body {
             <div class="form-header">
                 <span class="form-title">길벗 로그인 페이지</span>
             </div>
+
+        <form method="POST" action="main.html">
             <div class="form-body">
-                <input type="text" placeholder="아이디" class="id-input">
-                <input type="password" placeholder="비밀번호" class="password-input">
-                <button class="login-btn">로그인</button>
+                <input type="text" placeholder="아이디" name="id" class="id-input">
+                <input type="password" placeholder="비밀번호" name="password" class="password-input">
+                <input type = "submit" class ="login-btn" value = "로그인" onclick ="('로그인 성공')">
             </div>
+        </form>
             <ul class="findInfo_ul">
                 <li><a id="findPwd" onclick="location.href='FindId.html'">아이디 찾기</a></li>
                 <li>|</li>
@@ -211,35 +218,13 @@ body {
             <button id="findPwd_button" onclick="signup()" disabled>비밀번호 재설정</button>
         </div>
 
-
-        <div class="right-image"></div>
+        <div class="right-image"><img class="img" src="images/image 4.png" alt=""></div>
+        <div class="right-image"src="images/image 4.png" alt=""><div></div>
     </div>
     <script>
-        document.getElementById('login-button').addEventListener('click', () => {
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-
-            // 로그인 요청
-            fetch('http://localhost:3000/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ username, password })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    // 로그인 성공 시 메인 페이지로 이동
-                    location.href = 'main.html';
-                } else {
-                    alert('로그인에 실패했습니다: ' + data.message);
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-        });
     </script>
 </body>
 </html>
+
+
+https://velog.io/@mainfn/Node.js-%EA%B0%84%EB%8B%A8%ED%95%9C-http-Server-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0
