@@ -242,7 +242,30 @@ hr {
     white-space: normal;
 }
 
+.content{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 7.5%;
+}
+.contentimg{
+  position: absolute;
+  width: 125px;
+  height: 125px;
+  margin-right: 65%;
+}
+.contenttit{
+  top: 25%;
+  text-align: center;
+  margin-right: 35%; 
 
+}
+.contenttxt{
+  position: absolute;
+  margin-top: 4%;
+  margin-right: 35%;
+}
 
 .swiper-container {
   margin-top: 100px;
