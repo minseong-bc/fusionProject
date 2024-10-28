@@ -1,0 +1,31 @@
+<div class="login-page">
+    <div class="background"></div>
+    <div class="logo">
+        <span class="gilbeot" id = "tomain" onclick="location.href='main.html'">길벗</span>
+        <span class="slogan" id = "tomain" onclick="location.href='main.html'">길을 함께 가는 동무, 같은 길을 가는 사람</span>
+    </div>
+
+    <div class="login-form">
+        <div class="form-header">
+            <span class="form-title">길벗 로그인 페이지</span>
+        </div>
+
+    <form action="/" method="POST">
+        <div class="form-body">
+            <input type="text" placeholder="아이디" name="id" class="id-input">
+            <input type="password" placeholder="비밀번호" name="password" class="password-input">
+            <input type = "submit" class ="login-btn" value = "로그인">
+        </div>
+    </form>
+        <ul class="findInfo_ul">
+            <li><a id="findPwd" onclick="location.href='FindId.html'">아이디 찾기</a></li>
+            <li>|</li>
+            <li><a id="findPwd" onclick="location.href='Findpw.html'">비밀번호 찾기</a></li>
+            <li>|</li>
+            <li><a id="findPwd" onclick="location.href='register.html'">회원가입</a></li>
+        </ul>
+    </div>
+
+    <div class="right-image"><img class="img" src="images/image 4.png" alt=""></div>
+    <div class="right-image"src="images/image 4.png" alt=""></div>
+</div>

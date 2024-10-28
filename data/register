@@ -1,0 +1,32 @@
+<div class="container">
+        <h3>회원가입</h3>
+        <!-- 로고 -->
+        <div class="logo" id = "tomain" onclick="location.href='main.html'" >길벗</div>
+        <div class="logo-subtext" id = "tomain" onclick="location.href='main.html'">길을 함께 가는 동무, 같은 길을 가는 사람</div>
+
+
+        <form action="/signup" method="post">
+
+            <div class="a" id="a">아이디</div>
+                <input type="text" class="inputbox" name="id" id="id" placeholder="아이디를 입력해 주세요."/>
+            <div class="error" id="error_id"></div>
+
+            <div class="a" id="a">이름</div>
+                <input type="text" class="inputbox" id="name" placeholder="이름을 입력해 주세요."/>
+            <div class="error" id="error_name"></div>
+
+            <div class="a" id="a">비밀번호</div>
+            <input type="password" class="inputbox" name="password" id="password1" placeholder="비밀번호를 입력해 주세요."/>
+            <div class="error" id="error_password1"></div>
+            
+            <div class="a" id="a">전화번호</div>
+            <div class="phone_wrapper">
+                <input id="phone1" class="phoneNum" name="phone" type="text" maxlength="13">
+            </div>
+
+            <div class="footer">
+                <input type="submit" id="signup_button" value = "회원가입" onclick="signup()"></button>
+            </div>
+
+        </form>
+    </div>
