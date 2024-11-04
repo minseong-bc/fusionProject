@@ -17,7 +17,7 @@ mydb = mysql.connector.connect(
 options = webdriver.ChromeOptions()
 options.headless = True
 
-browser = webdriver.Chrome(options=options)  # "./chromedriver.exe"
+browser = webdriver.Chrome()  # "./chromedriver.exe"
 url = "https://api.visitkorea.or.kr/#/"
 wait = WebDriverWait(browser, 10)
 browser.get(url); # browser.back(); -> 뒤로가기

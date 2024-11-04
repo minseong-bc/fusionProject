@@ -20,7 +20,7 @@ const pool = mysql.createPool({
   host: 'localhost',
   user: 'root',
   password: 'admin',
-  database: 'db_test',
+  database: 'gilbut',
   waitForConnections: true,
   connectionLimit: 10,
   maxIdle: 10, 
@@ -30,7 +30,6 @@ const pool = mysql.createPool({
   keepAliveInitialDelay: 0,
 });
  
-
 app.get('/', (request, response) => { // 메인 페이지
   var title = 'main';
   pool.query(`SELECT * FROM gilbut.tour;`, (err, topics, fields) => { 
@@ -70,7 +69,7 @@ app.post('/signup', (request, response) => { // 회원가입 처리 라우팅
   var name = post.name;
   var password = post.password;
   var phone = post.phone;
-  pool.query(`INSERT INTO db_test.user VALUES (?, ?, ?, ?); `,[id, name, password, phone], (err, rows, fields) => {
+  pool.query(`INSERT INTO gilbut.user VALUES (?, ?, ?, ?); `,[id, name, password, phone], (err, rows, fields) => {
     if (err) {
       console.log(err);
     }
