@@ -12,7 +12,7 @@
             <div class="error" id="error_id"></div>
 
             <div class="a" id="a">이름</div>
-                <input type="text" class="inputbox" id="name" placeholder="이름을 입력해 주세요."/>
+                <input type="text" class="inputbox" name="name" id="name" placeholder="이름을 입력해 주세요."/>
             <div class="error" id="error_name"></div>
 
             <div class="a" id="a">비밀번호</div>

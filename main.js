@@ -7,6 +7,14 @@ const qs = require('querystring');
 const express = require('express');
 const app = express();
 const port = 3000;
+
+var bodyParser = require('body-parser');
+var compression = require('compression');
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(compression());
+app.use(express.static('public'));
+
 const mysql = require('mysql2');
 const pool = mysql.createPool({
   host: 'localhost',
@@ -25,11 +33,11 @@ const pool = mysql.createPool({
 
 app.get('/', (request, response) => { // 메인 페이지
   var title = 'main';
-    fs.readFile(`data/${title}`, 'utf8', (err, body) => {
-      var sanitizeBody = sanitizeHtml(body);       
-      var html = template.HTML(title, sanitizeBody);
-      response.send(html);
-    });
+  pool.query(`SELECT * FROM gilbut.tour;`, (err, topics, fields) => { 
+    var mainBody = template.main(topics);        
+    var html = template.HTML(title, mainBody);
+    response.send(html);
+  });  
 });
 
 app.get('/page/:pageId', (request, response) => { //세부 페이지 (지역, 축제, 식당) (회원가입 로그인 페이지 추가~~~~)
@@ -56,25 +64,19 @@ app.get('/register', (request, response) => { // 회원가입 페이지
   });
 });
 
-app.post('/register', (request, response) => { // 회원가입 처리 라우팅
-  var body = '';
-  request.on('data', function(data){ // post 방식으로 데이터를 받을 때
-    body = body + data;
-  });
-  request.on('end', function(){ // 데이터를 다 받았을 때
-    var post = qs.parse(body);
-    var id = post.id;
-    var name = post.name;
-    var password = post.password1;
-    var phone = post.phone1;
-    pool.query(`INSERT INTO db_test.user VALUES (?, ?, ?, ?); `,[id, name, password, phone], (err, rows, fields) => {
-      if (err) {
-        console.log(err);
-      }
-      console.log("register success!");
-    }); 
-    response.redirect('/login');
+app.post('/signup', (request, response) => { // 회원가입 처리 라우팅
+  var post = request.body;
+  var id = post.id;
+  var name = post.name;
+  var password = post.password;
+  var phone = post.phone;
+  pool.query(`INSERT INTO db_test.user VALUES (?, ?, ?, ?); `,[id, name, password, phone], (err, rows, fields) => {
+    if (err) {
+      console.log(err);
+    }
+    console.log("register success!");
   }); 
+  response.redirect('/login');
 });
 
 app.get('/login', (request, response) => { // 로그인 페이지
@@ -92,26 +94,21 @@ app.get('/login', (request, response) => { // 로그인 페이지
 });
 
 app.post('/login', (request, response) => { // 로그인 처리 라우팅
-  var body = '';
-  request.on('data', function(data){ // post 방식으로 데이터를 받을 때
-    body = body + data;
-  });
-  request.on('end', function(){ // 데이터를 다 받았을 때
-    var post = qs.parse(body);
-    var id = post.id;
-    var password = post.password;
-    
-    pool.query(`SELECT * FROM db_test.user WHERE id = ? and password = ?; `,[id, password], (err, rows, fields) => {
-      if (err) {
-        console.log(err);
-      }
-      console.log(rows[0].name + "님 환영합니다!");
-    }); 
-    response.redirect('/');
-  });
+  var post = request.body;
+  var id = post.id;
+  var password = post.password;
+  
+  pool.query(`SELECT * FROM db_test.user WHERE id = ? and password = ?; `,[id, password], (err, rows, fields) => {
+    if (err) {
+      console.log(err);
+    }
+    console.log(rows[0].name + "님 환영합니다!");
+  }); 
+  response.redirect('/');
 });
 
 app.post('/', (request, response) => { // 메인 페이지
+  var post = request.body;
   var title = 'main';
     fs.readFile(`data/${title}`, 'utf8', (err, body) => {
       var sanitizeBody = sanitizeHtml(body);       
