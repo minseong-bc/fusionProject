@@ -242,31 +242,58 @@ hr {
     white-space: normal;
 }
 
-.content{
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  margin-top: 7.5%;
-}
-.contentimg{
-  position: absolute;
-  width: 125px;
-  height: 125px;
-  margin-right: 65%;
-}
-.contenttit{
-  top: 25%;
-  text-align: center;
-  margin-right: 35%; 
-
-}
-.contenttxt{
-  position: absolute;
-  margin-top: 4%;
-  margin-right: 35%;
+.content {
+  display: grid;
+  grid-template-areas: 
+      "image title"
+      "image address"
+      "content content";
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  width: 50%;
+  max-width: 100%;
+  margin: 5% auto;
+  padding: 20px;
 }
 
+.contentimg {
+  grid-area: image;
+  align-self: start;
+}
+
+.contentimg img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contenttit {
+  grid-area: title;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  align-self: center;
+}
+
+.content-address {
+  grid-area: address;
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+  align-self: center;
+}
+
+.contenttxt {
+  grid-area: content;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
+  margin-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
 .swiper-container {
   margin-top: 100px;
   width: 1400px;
