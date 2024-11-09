@@ -33,7 +33,7 @@ const pool = mysql.createPool({
 app.get('/', (request, response) => { // 메인 페이지
   var title = '길벗 홈페이지';
   var pagename = "요즘 뜨는 여행코스";
-  pool.query(`SELECT * FROM gilbut.tour UNION SELECT * FROM gilbut.hotel;`, (err, topics, fields) => { 
+  pool.query(`SELECT Id, title, firstimage, detail FROM gilbut.course UNION SELECT Id, title, firstimage, detail FROM gilbut.hotel;`, (err, topics, fields) => { 
     if (err) {
       console.log(err);
     }
@@ -65,12 +65,34 @@ app.get('/page/:pageId', (request, response) => { //세부 페이지 (지역, �
     if (err) {
       console.log(err);
     } 
-    var content = template.content(topics);
+    var content = template.content(topics, 'main', pageId);
     var page = template.page(content, pagename);
 
     var html = template.HTML(pagename, page);
     response.send(html);
   });  
+});
+
+app.get('/page/:pageId/:Id', (request, response) => { 
+  var pageId = path.parse(request.params.pageId).base;
+  var Id = path.parse(request.params.Id).base;
+  pool.query(`SELECT * FROM gilbut.${pageId} `, (err, topics) => {
+    if (err) {
+      throw err;
+    }
+    pool.query(`SELECT * FROM gilbut.${pageId} WHERE Id = ?`, [Id], (err2, topic) => {
+      if (err2) {
+        throw err2;
+      }
+      var detail = template.detail(topic);
+      var html = template.HTML(pageId, detail);
+      // var content = template.content(topics);
+      // var page = template.page(content, pagename);
+  
+      // var html = template.HTML(pagename, page);
+      response.send(html);
+    });
+  });
 });
 
 app.get('/register', (request, response) => { // 회원가입 페이지
@@ -138,7 +160,7 @@ app.post('/', (request, response) => { // 메인 페이지
   var post = request.body;
   var id = post.id;
   var title = 'main';
-  pool.query(`SELECT * FROM gilbut.tour UNION SELECT * FROM gilbut.hotel;`, (err, topics, fields) => { 
+  pool.query(`SELECT Id, title, firstimage, detail FROM gilbut.course UNION SELECT Id, title, firstimage, detail FROM gilbut.hotel;`, (err, topics, fields) => { 
     var mainBody = template.main(topics);        
     var html = template.HTML(title, mainBody, id);
     response.send(html);
