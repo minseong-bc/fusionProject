@@ -31,39 +31,49 @@ const pool = mysql.createPool({
 });
  
 app.get('/', (request, response) => { // 메인 페이지
-  var title = 'main';
-  pool.query(`SELECT * FROM gilbut.tour;`, (err, topics, fields) => { 
-    var mainBody = template.main(topics);        
-    var html = template.HTML(title, mainBody);
+  var title = '길벗 홈페이지';
+  pool.query(`SELECT * FROM gilbut.tour UNION SELECT * FROM gilbut.hotel;`, (err, topics, fields) => { 
+    if (err) {
+      console.log(err);
+    }
+    var main = template.content(topics, 'main');
+    // var second = template.content(topics, 'second');
+    var second = 'second';
+    var body = template.main(main, second);
+           
+    var html = template.HTML(title, body);
     response.send(html);
   });  
 });
 
-app.get('/page/:pageId', (request, response) => { //세부 페이지 (지역, 축제, 식당) (회원가입 로그인 페이지 추가~~~~)
-  var filiterId = path.parse(request.params.pageId).base;
-  fs.readFile(`data/${filiterId}`, 'utf8', (err, body) => { 
-      var sanitizedTitle = sanitizeHtml(filiterId);
-      var sanitizeBody = sanitizeHtml(body);      
-      var html = template.HTML(sanitizedTitle, sanitizeBody);
-      response.send(html);
-    });
+app.get('/page/:pageId', (request, response) => { //세부 페이지 (지역, 축제, 식당) 
+  var pageId = path.parse(request.params.pageId).base;
+  pool.query(`SELECT * FROM gilbut.${pageId} `, (err, topics, fields) => {
+    if (err) {
+      console.log(err);
+    } 
+    var detail = template.detail(topics);        
+    var html = template.HTML(pageId ,detail);
+    response.send(html);
+  });  
 });
 
 app.get('/register', (request, response) => { // 회원가입 페이지
   var title = 'register';
   fs.readFile(`data/${title}`, 'utf8', (err, body) => {
-    var sanitizeBody = sanitizeHtml(body,{
-      allowedTags: sanitizeHtml.defaults.allowedTags.concat(['form', 'input', 'button']),
-      allowedAttributes: {
-        '*': ['id', 'class', 'type', 'name', 'placeholder', 'value', 'onclick', 'maxlength']
-      }
-    });       
-    var html = template.register(title, sanitizeBody);
+    // var sanitizeBody = sanitizeHtml(body,{
+    //   allowedTags: sanitizeHtml.defaults.allowedTags.concat(['form', 'input', 'button']),
+    //   allowedAttributes: {
+    //     '*': ['id', 'class', 'type', 'name', 'placeholder', 'value', 'onclick', 'maxlength']
+    //   } 새니타이즈가 뭐가 어때서... 어째서...
+    // });
+    var register = body;       
+    var html = template.register(title, register);
     response.send(html);
   });
 });
 
-app.post('/signup', (request, response) => { // 회원가입 처리 라우팅
+app.post('/register', (request, response) => { // 회원가입 처리 라우팅
   var post = request.body;
   var id = post.id;
   var name = post.name;
@@ -81,13 +91,16 @@ app.post('/signup', (request, response) => { // 회원가입 처리 라우팅
 app.get('/login', (request, response) => { // 로그인 페이지
   var title = 'login';
   fs.readFile(`data/${title}`, 'utf8', (err, body) => {
+    /*
     var sanitizeBody = sanitizeHtml(body,{
       allowedTags: sanitizeHtml.defaults.allowedTags.concat(['form', 'input', 'button']),
       allowedAttributes: {
         '*': ['id', 'class', 'type', 'name', 'placeholder', 'value', 'onclick'],
       }
-    });       
-    var html = template.login(title, sanitizeBody);
+    });
+    */
+    var login = body;  
+    var html = template.login(title, login);
     response.send(html);
   });
 });
@@ -108,12 +121,13 @@ app.post('/login', (request, response) => { // 로그인 처리 라우팅
 
 app.post('/', (request, response) => { // 메인 페이지
   var post = request.body;
+  var id = post.id;
   var title = 'main';
-    fs.readFile(`data/${title}`, 'utf8', (err, body) => {
-      var sanitizeBody = sanitizeHtml(body);       
-      var html = template.HTML(title, sanitizeBody);
-      response.send(html);
-    });
+  pool.query(`SELECT * FROM gilbut.tour UNION SELECT * FROM gilbut.hotel;`, (err, topics, fields) => { 
+    var mainBody = template.main(topics);        
+    var html = template.HTML(title, mainBody, id);
+    response.send(html);
+  });  
 });
 
 app.listen(port, () => {
