@@ -37,9 +37,9 @@ app.get('/', (request, response) => { // 메인 페이지
     if (err) {
       console.log(err);
     }
-    var content = template.content(topics, 'main');
+    var content = template.content(topics, 'main', 'course');
     var page = template.page(content, pagename);
-    var second = template.content(topics, 'second');
+    var second = template.content(topics, 'second', 'hotel');
     var body = template.main(page, second);
            
     var html = template.HTML(title, body);
