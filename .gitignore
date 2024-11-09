@@ -1,0 +1,14 @@
+# dependencies
+/node_modules
+
+# chrome driver
+chromedriver.exe
+LICENSE.chromedriver
+THIRD_PARTY_NOTICES.chromedriver
+
+# style
+/public/style/fonts
+
+# npm
+package-lock.json
+package.json
