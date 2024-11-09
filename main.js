@@ -32,14 +32,15 @@ const pool = mysql.createPool({
  
 app.get('/', (request, response) => { // 메인 페이지
   var title = '길벗 홈페이지';
+  var pagename = "요즘 뜨는 여행코스";
   pool.query(`SELECT * FROM gilbut.tour UNION SELECT * FROM gilbut.hotel;`, (err, topics, fields) => { 
     if (err) {
       console.log(err);
     }
-    var main = template.content(topics, 'main');
-    // var second = template.content(topics, 'second');
-    var second = 'second';
-    var body = template.main(main, second);
+    var content = template.content(topics, 'main');
+    var page = template.page(content, pagename);
+    var second = template.content(topics, 'second');
+    var body = template.main(page, second);
            
     var html = template.HTML(title, body);
     response.send(html);
@@ -48,12 +49,26 @@ app.get('/', (request, response) => { // 메인 페이지
 
 app.get('/page/:pageId', (request, response) => { //세부 페이지 (지역, 축제, 식당) 
   var pageId = path.parse(request.params.pageId).base;
+  if (pageId === 'region') {
+    var pagename = "여행지";
+  }
+  if (pageId === 'shopping') {
+    var pagename = "전통시장/쇼핑몰";
+  }
+  if (pageId === 'event') {
+    var pagename = "축제/공연/행사";
+  }
+  if (pageId === 'restaurant') {
+    var pagename = "맛집";
+  }
   pool.query(`SELECT * FROM gilbut.${pageId} `, (err, topics, fields) => {
     if (err) {
       console.log(err);
     } 
-    var detail = template.detail(topics);        
-    var html = template.HTML(pageId ,detail);
+    var content = template.content(topics);
+    var page = template.page(content, pagename);
+
+    var html = template.HTML(pagename, page);
     response.send(html);
   });  
 });
