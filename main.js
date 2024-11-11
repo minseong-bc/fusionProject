@@ -1,4 +1,4 @@
-// pm2 start main.js --watch --ignore-watch="data/*" --no-daemon
+// pm2 start main.js --watch --no-daemon
 const fs = require('fs');
 const template = require('./lib/template.js');
 const sanitizeHtml = require('sanitize-html');
@@ -37,11 +37,12 @@ app.get('/', (request, response) => { // 메인 페이지
     if (err) {
       console.log(err);
     }
+    var content = template.content(topics, 'course'); // content[0]은 첫 번째 컨텐츠(course), content[1]은 두 번째 컨텐츠(hotel)
 
-    var content = template.content(topics, 'main', 'course');
-    var page = template.page(content, pagename);
-    var second = template.content(topics, 'second', 'hotel');
-    var body = template.main(page, second);
+    var mainContent = template.page(content[0]);
+    var subContent = template.page(content[1]);
+
+    var body = template.main(mainContent, subContent);
            
     var html = template.HTML(title, body);
     response.send(html);
@@ -66,11 +67,12 @@ app.get('/page/:pageId', (request, response) => { //세부 페이지 (지역, �
     if (err) {
       console.log(err);
     } 
-    var content = template.content(topics, 'main', pageId);
-    var page = template.page(content, pagename);
+    var content = template.content(topics, pageId);
+    console.log(content);
+    // var page = template.page(content[0], pagename);
 
-    var html = template.HTML(pagename, page);
-    response.send(html);
+    // var html = template.HTML(pagename, page);
+    response.send("html");
   });  
 });
 
