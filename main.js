@@ -37,6 +37,7 @@ app.get('/', (request, response) => { // 메인 페이지
     if (err) {
       console.log(err);
     }
+
     var content = template.content(topics, 'main', 'course');
     var page = template.page(content, pagename);
     var second = template.content(topics, 'second', 'hotel');
@@ -86,10 +87,6 @@ app.get('/page/:pageId/:Id', (request, response) => {
       }
       var detail = template.detail(topic);
       var html = template.HTML(pageId, detail);
-      // var content = template.content(topics);
-      // var page = template.page(content, pagename);
-  
-      // var html = template.HTML(pagename, page);
       response.send(html);
     });
   });
@@ -166,6 +163,20 @@ app.post('/', (request, response) => { // 메인 페이지
     response.send(html);
   });  
 });
+
+app.post('/search', (request, response) => {
+  var post = request.body;
+  var value = post.value;
+  var pagename = "'" + value + "' 검색 결과";
+  pool.query(`SELECT * FROM gilbut.region WHERE addr1 like '%${value}%' or detail like '%${value}%';`, (err, topics, fields) => { 
+    if (err) {
+      console.log(err);
+    }
+    var content = template.content(topics, 'main', 'region');
+    
+    response.send(content);      
+  });
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
