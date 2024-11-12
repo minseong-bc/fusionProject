@@ -1,4 +1,14 @@
 html,body{ margin: 0; padding: 0; width: 100vw; height: 100vh;}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 a {text-decoration: none; color: inherit; }
 @font-face {
     font-family: 'HancomUljuBangudaePetroglyph';
@@ -242,57 +252,82 @@ hr {
   -webkit-box-orient: vertical;
   white-space: normal;
 }
-.content {
-  display: grid;
-  grid-template-areas: 
-      "image title"
-      "image address"
-      "content content";
-  grid-template-columns: 1fr 2fr;
-  gap: 20px;
-  width: 50%;
-  max-width: 100%;
-  margin: 5% auto;
+.container {
+  width: 80%;
+  max-width: 1800px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 40px auto;  /* 페이지 가운데로 배치 */
 }
 
-.contentimg {
-  grid-area: image;
-  align-self: start;
+.top-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  align-items: start;
 }
 
 .contentimg img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.contentimg {
+  position: relative;
+  overflow: hidden;
 }
 
-.contenttit {
-  grid-area: title;
+.contentimg img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.contentimg:hover img {
+  transform: scale(1.05);
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.content-details {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contenttitle {
   font-size: 24px;
   font-weight: bold;
   color: #333;
-  margin: 0;
-  align-self: center;
+  margin-bottom: 80px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
 }
 
-.content-address {
-  grid-area: address;
+.contentaddress {
   font-size: 18px;
   color: #666;
-  margin: 0;
-  align-self: center;
 }
 
-.contenttxt {
-  grid-area: content;
+.description {
+  margin-top: 20px;
   font-size: 18px;
   line-height: 1.6;
   color: #444;
-  margin-top: 20px;
-  width: 100%;
-  box-sizing: border-box;
 }
 .swiper-container {
   margin-top: 100px;
