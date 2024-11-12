@@ -37,12 +37,10 @@ app.get('/', (request, response) => { // 메인 페이지
     if (err) {
       console.log(err);
     }
-    var content = template.content(topics, 'course'); // content[0]은 첫 번째 컨텐츠(course), content[1]은 두 번째 컨텐츠(hotel)
-
-    var mainContent = template.page(content[0]);
-    var subContent = template.page(content[1]);
-
-    var body = template.main(mainContent, subContent);
+    var content = template.content(topics, 'main', 'course');
+    var page = template.page(content, pagename);
+    var second = template.content(topics, 'second', 'hotel');
+    var body = template.main(page, second);
            
     var html = template.HTML(title, body);
     response.send(html);
@@ -67,12 +65,11 @@ app.get('/page/:pageId', (request, response) => { //세부 페이지 (지역, �
     if (err) {
       console.log(err);
     } 
-    var content = template.content(topics, pageId);
-    console.log(content);
-    // var page = template.page(content[0], pagename);
+    var content = template.content(topics, 'main', pageId);
+    var page = template.page(content, pagename);
 
-    // var html = template.HTML(pagename, page);
-    response.send("html");
+    var html = template.HTML(pagename, page);
+    response.send(html);
   });  
 });
 
@@ -174,9 +171,12 @@ app.post('/search', (request, response) => {
     if (err) {
       console.log(err);
     }
+    // console.log(topics);
     var content = template.content(topics, 'main', 'region');
+    var page = template.page(content, pagename);
+    var html = template.HTML(pagename, page);
     
-    response.send(content);      
+    response.send(html);      
   });
 })
 
