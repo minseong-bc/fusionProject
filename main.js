@@ -167,7 +167,7 @@ app.post('/search', (request, response) => {
   var post = request.body;
   var value = post.value;
   var pagename = "'" + value + "' 검색 결과";
-  pool.query(`SELECT * FROM gilbut.region WHERE addr1 like '%${value}%' or detail like '%${value}%';`, (err, topics, fields) => { 
+  pool.query(`SELECT * FROM gilbut.region WHERE addr1 like '%${value}%' or detail like '%${value}%' UNION SELECT * FROM gilbut.shopping where addr1 like '%${value}%' or detail like '%${value}%';`, (err, topics, fields) => { 
     if (err) {
       console.log(err);
     }
