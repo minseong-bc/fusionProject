@@ -33,13 +33,13 @@ const pool = mysql.createPool({
 app.get('/', (request, response) => { // 메인 페이지
   var title = '길벗 홈페이지';
   var pagename = "요즘 뜨는 여행코스";
-  pool.query(`SELECT Id, title, firstimage, detail FROM gilbut.course UNION SELECT Id, title, firstimage, detail FROM gilbut.hotel;`, (err, topics, fields) => { 
+  pool.query(`SELECT 'course' as sourse, Id, title, firstimage, detail FROM gilbut.course UNION SELECT 'hotel' as sourse, Id, title, firstimage, detail FROM gilbut.hotel;`, (err, topics, fields) => { 
     if (err) {
       console.log(err);
     }
-    var content = template.content(topics, 'main', 'course');
+    var content = template.content(topics, 'main');
     var page = template.page(content, pagename);
-    var second = template.content(topics, 'second', 'hotel');
+    var second = template.content(topics, 'second');
     var body = template.main(page, second);
            
     var html = template.HTML(title, body);
@@ -48,7 +48,7 @@ app.get('/', (request, response) => { // 메인 페이지
 });
 
 app.get('/page/:pageId', (request, response) => { //세부 페이지 (지역, 축제, 식당) 
-  var pageId = path.parse(request.params.pageId).base;
+  var pageId = path.parse(request.params.pageId).base; // 테이블 이름 가져오기
   if (pageId === 'region') {
     var pagename = "여행지";
   }
@@ -61,11 +61,11 @@ app.get('/page/:pageId', (request, response) => { //세부 페이지 (지역, �
   if (pageId === 'restaurant') {
     var pagename = "맛집";
   }
-  pool.query(`SELECT * FROM gilbut.${pageId} `, (err, topics, fields) => {
+  pool.query(`SELECT '${pageId}' as sourse, Id, addr1, title, firstimage, detail FROM gilbut.${pageId} `, (err, topics, fields) => {
     if (err) {
       console.log(err);
     } 
-    var content = template.content(topics, 'main', pageId);
+    var content = template.content(topics, 'main');
     var page = template.page(content, pagename);
 
     var html = template.HTML(pagename, page);
@@ -156,7 +156,7 @@ app.post('/', (request, response) => { // 메인 페이지
   var post = request.body;
   var id = post.id;
   var title = 'main';
-  pool.query(`SELECT Id, title, firstimage, detail FROM gilbut.course UNION SELECT Id, title, firstimage, detail FROM gilbut.hotel;`, (err, topics, fields) => { 
+  pool.query(`SELECT 'course' as sourse, Id, title, firstimage, detail FROM gilbut.course UNION SELECT 'hotel' as sourse, Id, title, firstimage, detail FROM gilbut.hotel;`, (err, topics, fields) => { 
     var mainBody = template.main(topics);        
     var html = template.HTML(title, mainBody, id);
     response.send(html);
@@ -167,12 +167,18 @@ app.post('/search', (request, response) => {
   var post = request.body;
   var value = post.value;
   var pagename = "'" + value + "' 검색 결과";
-  pool.query(`SELECT * FROM gilbut.region WHERE addr1 like '%${value}%' or detail like '%${value}%' UNION SELECT * FROM gilbut.shopping where addr1 like '%${value}%' or detail like '%${value}%';`, (err, topics, fields) => { 
+  pool.query(`
+    SELECT 'region' as sourse, Id, title, firstimage, detail FROM gilbut.region WHERE addr1 like '%${value}%' or detail like '%${value}%' 
+    UNION 
+    SELECT 'shopping' as sourse, Id, title, firstimage, detail FROM gilbut.shopping where addr1 like '%${value}%' or detail like '%${value}%'
+    UNION 
+    SELECT 'event' as sourse, Id, title, firstimage, detail FROM gilbut.event where addr1 like '%${value}%' or detail like '%${value}%'
+    UNION 
+    SELECT 'restaurant' as sourse, Id, title, firstimage, detail FROM gilbut.restaurant where addr1 like '%${value}%' or detail like '%${value}%';`, (err, topics, fields) => { 
     if (err) {
       console.log(err);
     }
-    // console.log(topics);
-    var content = template.content(topics, 'main', 'region');
+    var content = template.content(topics, 'main');
     var page = template.page(content, pagename);
     var html = template.HTML(pagename, page);
     
