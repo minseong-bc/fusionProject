@@ -206,7 +206,7 @@ app.get('/page/:pageId/filter/:filter', (request, response ) => {
     if (err) {
       throw err;
     }
-    pool.query(`SELECT * FROM gilbut.${pageId} WHERE addr1 like '%${filter}%'`, (err2, topic) => {
+    pool.query(`SELECT '${pageId}' as sourse, Id, addr1, title, firstimage, detail FROM gilbut.${pageId} WHERE addr1 like '%${filter}%'`, (err2, topic) => {
       if (err2) {
         throw err2;
       }
