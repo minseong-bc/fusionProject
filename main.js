@@ -4,6 +4,7 @@ const template = require('./lib/template.js');
 const sanitizeHtml = require('sanitize-html');
 const path = require('path');
 const qs = require('querystring');
+const url = require('url');
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -185,6 +186,39 @@ app.post('/search', (request, response) => {
     response.send(html);      
   });
 })
+
+app.get('/page/:pageId/filter/:filter', (request, response ) => {
+  var pageId = path.parse(request.params.pageId).base;
+  var filter = path.parse(request.params.filter).base;
+  if (pageId === 'region') {
+    var pagename = "여행지";
+  }
+  if (pageId === 'shopping') {
+    var pagename = "전통시장/쇼핑몰";
+  }
+  if (pageId === 'event') {
+    var pagename = "축제/공연/행사";
+  }
+  if (pageId === 'restaurant') {
+    var pagename = "맛집";
+  }
+  pool.query(`SELECT * FROM gilbut.${pageId} `, (err, topics) => {
+    if (err) {
+      throw err;
+    }
+    pool.query(`SELECT * FROM gilbut.${pageId} WHERE addr1 like '%${filter}%'`, (err2, topic) => {
+      if (err2) {
+        throw err2;
+      }
+      pagename = pagename + "    #" + filter;
+      var content = template.content(topic, 'main');
+      var page = template.page(content, pagename);
+      var html = template.HTML(pagename, page);
+      response.send(html);
+    });
+  });
+
+});
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
