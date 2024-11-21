@@ -1613,3 +1613,7 @@ li {
   display: inline;
   padding: 15px;
 }
+.info {
+  margin-left: 350px;
+  margin-top: 50px
+}

@@ -17,6 +17,7 @@ app.use(compression());
 app.use(express.static('public'));
 
 const mysql = require('mysql2');
+const { table } = require('console');
 const pool = mysql.createPool({
   host: 'localhost',
   user: 'root',
@@ -38,8 +39,9 @@ app.get('/', (request, response) => { // 메인 페이지
     if (err) {
       console.log(err);
     }
+    var table = topics[0].sourse
     var content = template.content(topics, 'main');
-    var page = template.page(content, pagename);
+    var page = template.page(content, pagename, table);
     var second = template.content(topics, 'second');
     var body = template.main(page, second);
            
@@ -66,8 +68,9 @@ app.get('/page/:pageId', (request, response) => { //세부 페이지 (지역, �
     if (err) {
       console.log(err);
     } 
+    var table = topics[0].sourse
     var content = template.content(topics, 'main');
-    var page = template.page(content, pagename);
+    var page = template.page(content, pagename, table);
 
     var html = template.HTML(pagename, page);
     response.send(html);
@@ -179,8 +182,9 @@ app.post('/search', (request, response) => {
     if (err) {
       console.log(err);
     }
+    var table = topics[0].sourse
     var content = template.content(topics, 'main');
-    var page = template.page(content, pagename);
+    var page = template.page(content, pagename, table);
     var html = template.HTML(pagename, page);
     
     response.send(html);      
@@ -202,7 +206,7 @@ app.get('/page/:pageId/filter/:filter', (request, response ) => {
   if (pageId === 'restaurant') {
     var pagename = "맛집";
   }
-  pool.query(`SELECT * FROM gilbut.${pageId} `, (err, topics) => {
+  pool.query(`SELECT '${pageId}' as sourse, Id, addr1, title, firstimage, detail FROM gilbut.${pageId} `, (err, topics) => {
     if (err) {
       throw err;
     }
@@ -211,10 +215,19 @@ app.get('/page/:pageId/filter/:filter', (request, response ) => {
         throw err2;
       }
       pagename = pagename + "    #" + filter;
-      var content = template.content(topic, 'main');
-      var page = template.page(content, pagename);
-      var html = template.HTML(pagename, page);
-      response.send(html);
+      if (topic.length === 0) {
+        var info = "<div class=\"info\"><h1>선택한 지역에 대한 여행정보가 없습니다.</h1></div>";
+        console.log(info);
+        var page = template.page(info, pagename, pageId);
+        var html = template.HTML(pagename, page);
+        response.send(html);
+      } else {
+        var table = topics[0].sourse
+        var content = template.content(topic, 'main');
+        var page = template.page(content, pagename, table);
+        var html = template.HTML(pagename, page);
+        response.send(html);
+      }
     });
   });
 
