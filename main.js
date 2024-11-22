@@ -217,7 +217,6 @@ app.get('/page/:pageId/filter/:filter', (request, response ) => {
       pagename = pagename + "    #" + filter;
       if (topic.length === 0) {
         var info = "<div class=\"info\"><h1>선택한 지역에 대한 여행정보가 없습니다.</h1></div>";
-        console.log(info);
         var page = template.page(info, pagename, pageId);
         var html = template.HTML(pagename, page);
         response.send(html);
